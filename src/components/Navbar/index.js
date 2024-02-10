@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Link from 'next/link';
+import styles from './style.module.scss'
 
 const menuItems = {
 	names: ['Home', 'About', 'Contact'],
@@ -14,7 +12,6 @@ const Navbar = () => {
 	const handleNavbar = () => {
 		setNavbarOpen(prevData => !prevData)
 	}
-	console.log(menuItems,'mi')
 	const navbarMenuOpen = () => {
 		return <svg  className="h-6 w-6"
 			xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +44,7 @@ const Navbar = () => {
 
   return (
     <>
-			<nav className='bg-blue-700'>
+			<nav className='bg-indigo-400'>
 					<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 							<div className='flex items-center justify-between h-16'>
 									<div className='flex items-center'>
@@ -79,7 +76,7 @@ export default Navbar;
 
 const NavItemsDesktop = () => {
 	const commonData = menuItems?.names?.map((item, index) => (
-		<Link key={index} href={menuItems?.redirection[index]} className='text-white hover:bg-white hover:text-black rounded-lg p-2'>
+		<Link key={index} href={menuItems?.redirection[index]} className='px-5 text-white hover:bg-white hover:text-black rounded-lg p-2'>
 			{item}
 		</Link>
 	))
