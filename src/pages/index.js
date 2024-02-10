@@ -1,8 +1,9 @@
+import OurServices from "@/components/OurServices";
 
 export default function Home() {
   return (
-    <main>
-      mahesh
-    </main>
+    <>
+      <OurServices />
+    </>
   );
 }
