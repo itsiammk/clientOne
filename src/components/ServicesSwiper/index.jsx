@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
+import style from './style.module.scss'
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,10 +14,10 @@ import { useMediaQuery } from 'react-responsive';
 const ServicesSwiper = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
-    <div className="pl-2 pr-2 pb-10">
+    <div className="pl-2 pr-2 pb-20 pt-5 shadow-md">
       <h1 className="pl-5 pt-10 pb-5 mb-4 text-3xl font-extrabold text-gray-900 dark:text-black md:text-4xl lg:text-5xl">
         <span className="text-transparent bg-clip-text bg-gradient-to-r to-indigo-600 from-sky-400">
-          Services 
+          SERVICES
         </span> we provide
       </h1>
       <Swiper
@@ -25,7 +26,7 @@ const ServicesSwiper = () => {
         modules={[Navigation, Pagination, Autoplay, A11y]}
         navigation={true}
         loop={true}
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 3000 }}
         pagination={{ clickable: true }}
         className="mySwiper"
       >
