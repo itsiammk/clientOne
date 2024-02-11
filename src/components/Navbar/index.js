@@ -4,7 +4,11 @@ import style from './style.module.scss'
 
 const menuItems = {
 	names: ['Home', 'About Us', 'Services', 'Career', 'Projects', 'Contact Us'],
-	redirection: ['/', '/', '/services', '/', '/', '/']
+	redirection: ['/', '/', '/services', '/', '/', '/'],
+	textColor: ['black', 'black', 'black', 'black', 'black', 'white'],
+	hoverBg: ['blue-500', 'blue-500', 'blue-500', 'blue-500', 'blue-500', 'white'],
+	bg: ['white', 'white', 'white', 'white', 'white', 'blue'],
+	hoverTextColor: ['white', 'white', 'white', 'white', 'white', 'black']
 }
 
 const Navbar = () => {
@@ -76,7 +80,7 @@ export default Navbar;
 
 const NavItemsDesktop = () => {
 	const commonData = menuItems?.names?.map((item, index) => (
-		<Link key={index} href={menuItems?.redirection[index]} className='px-5 text-blue hover:bg-blue-500 hover:text-white rounded-lg p-2'>
+		<Link key={index} href={menuItems?.redirection[index]} className={`px-5 text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]}-500 hover:bg-${menuItems?.hoverBg[index]} hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}>
 			{item}
 		</Link>
 	))
