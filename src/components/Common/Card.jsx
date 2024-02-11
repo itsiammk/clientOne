@@ -21,8 +21,7 @@ const Cards = ({title, info, imageSrc}) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size={'small'} > Share </Button>
-                <Button size={'small'} > Share </Button>
+                <Button size={'small'} > View more </Button>
             </CardActions>
         </Card>
     </Box>

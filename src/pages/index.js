@@ -1,9 +1,13 @@
+import AboutUsHome from "@/components/AboutUsHome";
 import OurServices from "@/components/OurServices";
+import ServicesSwiper from "@/components/ServicesSwiper";
 
 export default function Home() {
   return (
     <>
-      <OurServices />
+      <AboutUsHome />
+      {/* <OurServices /> */}
+      <ServicesSwiper />
     </>
   );
 }
