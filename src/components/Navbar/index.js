@@ -69,7 +69,7 @@ const Navbar = () => {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <Link href="/" className="text-blue">
-                  Logo
+                  <img className={style.logo} src='/logo.png' />
                 </Link>
               </div>
             </div>
