@@ -1,0 +1,12 @@
+.image{
+    height: 400px;
+    width: 100%;
+}
+.imageContainer{
+    width: 600px;
+}
+.para{
+    @media (max-width: 768px) {
+        font-size: 13px;
+    }
+}

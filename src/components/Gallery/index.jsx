@@ -49,7 +49,7 @@ const Gallery = () => {
           Three
         </button>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-4">
         {filteredData?.map((item, index) => {
           return (
             <div className="cursor-pointer" key={index}>

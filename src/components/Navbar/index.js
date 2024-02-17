@@ -14,7 +14,7 @@ const menuItems = {
     "indigo-500",
     "indigo-600",
   ],
-  bg: ["white", "white", "white", "white", "white", "indigo"],
+  bg: ["white", "white", "white", "white", "white", "indigo-500"],
   hoverTextColor: ["white", "white", "white", "white", "white", "black"],
 };
 
@@ -99,7 +99,7 @@ const NavItemsDesktop = ({handleNavbar}) => {
     <Link
       key={index}
       href={menuItems?.redirection[index]}
-      className={`px-5 text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]}-500 hover:bg-${menuItems?.hoverBg[index]} hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
+      className={`px-5 text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]} hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
     >
       {item}
     </Link>
@@ -112,13 +112,13 @@ const NavItemsMobile = ({handleNavbar}) => {
     <Link
       key={index}
       href={menuItems?.redirection[index]}
-      className={`px-5 block text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]}-500 hover:bg-${menuItems?.hoverBg[index]} hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
+      className={`px-5 block text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]} hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
     >
       {item}
     </Link>
   ));
   return (
-    <div onClick={handleNavbar} className="md:hidden">
+    <div onClick={handleNavbar} className="md:hidden bg-white">
       <div className="px-2 pt-3 pb-3 space-y-2 sm:px-3">{commonData}</div>
     </div>
   );
