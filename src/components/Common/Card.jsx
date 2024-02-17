@@ -11,6 +11,7 @@ const Cards = ({title, info, imageSrc}) => {
               height={140}
               image={imageSrc}
               alt={'image'}
+              className={style.cardImage}
             />
             <CardContent>
                 <Typography className={style.title} gutterBottom variant={'h5'} component={'div'}>

@@ -1,42 +1,42 @@
 export const data = [
   {
     type: "image",
-    content: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg",
+    content: "img1.jfif",
     tag: "one",
   },
   {
     type: "video",
-    content: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    content: "vid1.mp4",
     tag: "three",
   },
   {
     type: "image",
-    content: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
+    content: "img2.jfif",
     tag: "two",
   },
   {
     type: "image",
-    content: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
+    content: "img3.jfif",
     tag: "one",
   },
   {
     type: "image",
-    content: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
+    content: "img4.jfif",
     tag: "two",
   },
   {
     type: "video",
-    content: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    content: "vid1.mp4",
     tag: "three",
   },
   {
     type: "image",
-    content: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg",
+    content: "img5.jfif",
     tag: "one",
   },
   {
     type: "image",
-    content: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg",
+    content: "service.png",
     tag: "two",
   },
   {

@@ -1,7 +1,7 @@
 const serviceapi = [
     {
       id: 1,
-      logo: "https://source.unsplash.com/random/300x200",
+      logo: "/bridge.png",
       title: "Erection of Steel Structures and Bridges",
       info: "We're the builders of sturdy foundations and impressive structures that stand the test of time. Our bridges are not just connections; they're masterpieces of engineering.",
     },
