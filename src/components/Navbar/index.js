@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import style from "./style.module.scss";
+import { useRouter } from "next/router";
 
 const menuItems = {
   names: ["Home", "About Us", "Services", "Career", "Projects", "Contact Us"],
@@ -20,6 +21,7 @@ const menuItems = {
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const router = useRouter();
   const handleNavbar = () => {
     setNavbarOpen((prevData) => !prevData);
   };
@@ -95,27 +97,38 @@ const Navbar = () => {
 export default Navbar;
 
 const NavItemsDesktop = ({handleNavbar}) => {
+  const router = useRouter();
+
+  const handleNavigation = (index) => {
+    router.push(menuItems?.redirection[index])
+  }
+
   const commonData = menuItems?.names?.map((item, index) => (
-    <Link
+    <a
       key={index}
-      href={menuItems?.redirection[index]}
-      className={`px-5 text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]}-500 hover:bg-${menuItems?.hoverBg[index]} hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
+      onClick={()=>handleNavigation(index)}
+      className={`px-5 text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]}-500 hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
     >
       {item}
-    </Link>
+    </a>
   ));
   return <div onClick={handleNavbar} className="ml-4 flex items-center space-x-4">{commonData}</div>;
 };
 
 const NavItemsMobile = ({handleNavbar}) => {
+  const router = useRouter();
+
+  const handleNavigation = (index) => {
+    router.push(menuItems?.redirection[index])
+  }
   const commonData = menuItems?.names?.map((item, index) => (
-    <Link
+    <a
       key={index}
-      href={menuItems?.redirection[index]}
+      onClick={()=>handleNavigation(index)}
       className={`px-5 block text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]}-500 hover:bg-${menuItems?.hoverBg[index]} hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
     >
       {item}
-    </Link>
+    </a>
   ));
   return (
     <div onClick={handleNavbar} className="md:hidden">
