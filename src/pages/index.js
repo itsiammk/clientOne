@@ -4,6 +4,7 @@ import GalleryHome from "@/components/GalleryHome";
 import HomeSwiper from "@/components/HomeSwiper";
 import OurServices from "@/components/OurServices";
 import ServicesSwiper from "@/components/ServicesSwiper";
+import Scroller from "@/components/scroller";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       {/* <OurServices /> */}
       <ServicesSwiper />
       <GalleryHome />
+      <Scroller />
     </>
   );
 }
