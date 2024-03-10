@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import style from "./style.module.scss";
 import { useRouter } from "next/router";
+import { useAppContext } from "@/context/AppContext";
 
 const menuItems = {
-  names: ["Home", "About Us", "Services", "Career", "Projects", "Contact Us"],
-  redirection: ["/", "/", "/services", "/", "/", "/"],
+  names: ["Home", "About Us", "Services", "Career", "Projects", "Contact Us", 'cart'],
+  redirection: ["/", "/about-us", "/services", "/", "/", "/contact",''],
   textColor: ["black", "black", "black", "black", "black", "white"],
   hoverBg: [
     "indigo-500",
@@ -21,6 +22,8 @@ const menuItems = {
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const {state, dispatch} = useAppContext()
+  const {srpReducer} = state
   const router = useRouter();
   const handleNavbar = () => {
     setNavbarOpen((prevData) => !prevData);
@@ -98,21 +101,27 @@ export default Navbar;
 
 const NavItemsDesktop = ({handleNavbar}) => {
   const router = useRouter();
-
+  const {state, dispatch} = useAppContext()
+  const {srpReducer} = state
   const handleNavigation = (index) => {
     router.push(menuItems?.redirection[index])
   }
+  useEffect(()=>{
 
+    console.log(srpReducer.cartCount,'cartCount',state)
+  },[state])
   const commonData = menuItems?.names?.map((item, index) => (
     <a
       key={index}
       onClick={()=>handleNavigation(index)}
       className={`px-5 text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]}-500 hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
     >
-      {item}
+      {item === 'cart' ? `${item} ${srpReducer.cartCount}` : item}
     </a>
   ));
-  return <div onClick={handleNavbar} className="ml-4 flex items-center space-x-4">{commonData}</div>;
+  return (
+  <div onClick={handleNavbar} className="ml-4 flex items-center space-x-4">{commonData}</div>
+  )
 };
 
 const NavItemsMobile = ({handleNavbar}) => {
