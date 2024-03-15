@@ -1,20 +1,20 @@
-import AboutUsHome from "@/components/AboutUsHome";
-import Gallery from "@/components/Gallery";
-import GalleryHome from "@/components/GalleryHome";
+import Popup from "@/components/CartPopup";
 import HomeSwiper from "@/components/HomeSwiper";
-import OurServices from "@/components/OurServices";
-import ServicesSwiper from "@/components/ServicesSwiper";
-import Scroller from "@/components/scroller";
+import { useAppContext } from "@/context/AppContext";
+import { useState } from "react";
 
 export default function Home() {
+  const {state, dispatch} = useAppContext()
+  const {srpReducer} = state
+  const [popUpVisible, setPopUpVisible] = useState(false)
+  const onClose = () => {
+    setPopUpVisible(false)
+    dispatch({type: 'PopHandle', payload: false})
+  }
   return (
     <>
+      <Popup popUpVisible={popUpVisible} onClose = {onClose}/>
       <HomeSwiper />
-      <AboutUsHome />
-      {/* <OurServices /> */}
-      <ServicesSwiper />
-      <GalleryHome />
-      <Scroller />
     </>
   );
 }

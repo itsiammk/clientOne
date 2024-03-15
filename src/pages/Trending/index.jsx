@@ -6,14 +6,13 @@ import { getAllProduct } from './apiService'
 import { useRouter } from 'next/router'
 import { useAppContext } from '@/context/AppContext'
 
-const Contact = () => {
+const Trending = () => {
     const router = useRouter()
     const buyButtonRef = useRef();
     const [allData, setAllData] = useState({})
     const {state, dispatch} = useAppContext()
+    const [selectedProducts, setSelectedProducts] = useState({});
     const {srpReducer} = state
-    // const [cartcnt, setCartCount] = useState(srpReducer.cartCount)
-    // console.log(cartcnt,'hello')
     useEffect(()=>{
         // setCartCount(srpReducer.cartCount)
     },[srpReducer])
@@ -30,16 +29,50 @@ const Contact = () => {
     }, []);
     const handleClick = (e, index) => {
         // console.log(buyButtonRef,e,'helloo',buyButtonRef.current.contains(e.target))
-        router.push(`/contact/${index}`);
+        // router.push(`/Trending/${index}`);
         // if (buyButtonRef.current && !buyButtonRef.current.contains(e.target)) {
         // }
     };
-    const buyClickHandle = (e) => {
-        // setCartCount(cartcnt+1)
-        dispatch({type: 'COUNT' })
-        e.preventDefault()
-        e.stopPropagation()
+    const buyClickHandle = (e, product) => {
+        // Dispatching 'COUNT' action, if necessary
+        dispatch({type: 'COUNT'});
+        
+        // Preventing event propagation
+        // e.stopPropagation();
+        
+        // Updating the state based on the product's presence
+        setSelectedProducts(prevState => {
+            // Check if the product is already selected
+            if (prevState[product.id]) {
+                // If selected, increase the quantity
+                return {
+                    ...prevState,
+                    [product.id]: {
+                        ...prevState[product.id],
+                        quantity: prevState[product.id].quantity + 1
+                    }
+                };
+            } else {
+                // If not selected, add the product with quantity 1
+                return {
+                    ...prevState,
+                    [product.id]: {
+                        id: product.id,
+                        quantity: 1
+                    }
+                };
+            }
+        });
+        setTimeout(()=>{
+            console.log(productsArray,'hellothere',selectedProducts)
+        },200)
+        dispatch({type:'HandleCart', payload: productsArray})
     }
+    const productsArray = Object.values(selectedProducts).map(product => ({
+        id: product.id,
+        quantity: product.quantity
+    }));
+        console.log(productsArray,'12345',srpReducer.cartValue)
     return (
         <>
             <div className={Style.gridContainer} ref={buyButtonRef}>
@@ -47,7 +80,7 @@ const Contact = () => {
                     <div  key={index} className={Style.gridItem} onClick={(e)=>handleClick(e,item?.id)}>
                         <h6 >{item.title}</h6>
                         <img className={Style.img} src={item.images[0]} alt={item.title} />
-                        <button className={Style.buyButton} ref={buyButtonRef} onClick={buyClickHandle}>Buy Now</button>
+                        <button className={Style.buyButton} ref={buyButtonRef} onClick={(e)=>buyClickHandle(e,item)}>Buy Now</button>
                     </div>
                 ))}
             </div>
@@ -56,7 +89,7 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Trending
 
 
 

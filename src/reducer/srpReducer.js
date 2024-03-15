@@ -1,9 +1,19 @@
 export const srpReducer = (state, action) => {
-    console.log(state,'state')
-    switch (action.type){
+    switch (action.type) {
         case 'COUNT':
-            return{
-                cartCount: state.cartCount+1
-            }
+            return {
+                ...state,
+                cartCount: state.cartCount + 1
+            };
+        case 'PopHandle':
+            return {
+                ...state,
+                isPopUpOpen: action.payload
+            };
+        case 'HandleCart':
+            return {
+                ...state,
+                cartValue: action.payload
+            };
     }
-}
+};

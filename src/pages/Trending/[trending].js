@@ -3,17 +3,19 @@ import { getSingleProduct } from './apiService'
 import { useRouter } from 'next/router'
 const product = () => {
     const router = useRouter()
-    const {contact} = router.query 
+    const {trending} = router.query 
+    console.log(trending,'contact')
     const [productData, setProductData] = useState({})
     useEffect(()=>{
         const fetchData = async() => {
-            const res = await getSingleProduct(contact)
+            const res = await getSingleProduct(trending)
             setProductData(res)
         }
-        if(contact){
+        if(trending){
             fetchData()
         }
-    },[contact])
+    },[trending])
+    console.log(productData,'hello')
     return (
         <div>
             <h6>{productData?.title}</h6>

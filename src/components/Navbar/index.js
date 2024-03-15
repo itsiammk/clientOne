@@ -5,19 +5,17 @@ import { useRouter } from "next/router";
 import { useAppContext } from "@/context/AppContext";
 
 const menuItems = {
-  names: ["Home", "About Us", "Services", "Career", "Projects", "Contact Us", 'cart'],
-  redirection: ["/", "/about-us", "/services", "/", "/", "/contact",''],
+  names: ["Login", "Trending", 'cart'],
+  icon: ['user.png','trending-topic.png','shopping-cart.png'],
+  redirection: ["/", "/Trending",''],
   textColor: ["black", "black", "black", "black", "black", "white"],
   hoverBg: [
     "indigo-500",
     "indigo-500",
     "indigo-500",
-    "indigo-500",
-    "indigo-500",
-    "indigo-600",
   ],
-  bg: ["white", "white", "white", "white", "white", "indigo"],
-  hoverTextColor: ["white", "white", "white", "white", "white", "black"],
+  bg: ["white", "white", "white"],
+  hoverTextColor: ["white", "white", "white"],
 };
 
 const Navbar = () => {
@@ -65,7 +63,18 @@ const Navbar = () => {
       </svg>
     );
   };
-
+  const [searchValue, setSearchValue] = useState('')
+  const handleChange = (e) => {
+    setSearchValue(e.target.value)
+  }
+  const handleRoute = () => {
+    router.push(searchValue)
+  }
+  const handleKeyPress = (e) => {
+    if(e.key === 'Enter'){
+      handleRoute()
+    }
+  }
   return (
     <>
       <nav className={`bg-white shadow-lg sticky top-0 ${style.main}`}>
@@ -74,8 +83,12 @@ const Navbar = () => {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <Link href="/" className="text-blue">
-                  <img className={style.logo} src='/logo.png' />
+                  <img className={style.logo} src='/EcomLogo.jpg' />
                 </Link>
+              </div>
+              <div className={style.searchBar}>
+                <input className={style.inputTag} placeholder="Search.." onChange={handleChange} onKeyPress={handleKeyPress}/>
+                  <img className = {style.searchIcon} src='/search.png' onClick={handleRoute}/>
               </div>
             </div>
             <div className="hidden md:block">
@@ -104,23 +117,34 @@ const NavItemsDesktop = ({handleNavbar}) => {
   const {state, dispatch} = useAppContext()
   const {srpReducer} = state
   const handleNavigation = (index) => {
-    router.push(menuItems?.redirection[index])
-  }
+    if(menuItems.names[index] === 'cart'){
+           dispatch({type: 'PopHandle', payload: true})
+           console.log(state)
+    }
+    else{
+      router.push(menuItems?.redirection[index])
+    }
+  } 
   useEffect(()=>{
-
     console.log(srpReducer.cartCount,'cartCount',state)
   },[state])
   const commonData = menuItems?.names?.map((item, index) => (
     <a
       key={index}
       onClick={()=>handleNavigation(index)}
-      className={`px-5 text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]}-500 hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
-    >
-      {item === 'cart' ? `${item} ${srpReducer.cartCount}` : item}
+      className={`px-3 text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]}-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
+    > 
+      <div className={style.iconContainer}>
+      <img className={style.icons} src={menuItems?.icon[index]} />
+      {item === 'cart' &&  srpReducer.cartCount!==0 ? `${item} ${srpReducer?.cartCount}`: item}
+      </div>
     </a>
   ));
   return (
-  <div onClick={handleNavbar} className="ml-4 flex items-center space-x-4">{commonData}</div>
+    <>
+      
+  <div onClick={handleNavbar} className="ml-4 flex items-center space-x-2">{commonData}</div>
+    </>
   )
 };
 

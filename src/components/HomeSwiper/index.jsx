@@ -6,22 +6,18 @@ import style from "./style.module.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import serviceapi from "@/api/servicesApi";
-import Image from "next/image";
+import SwiperButton from "../SwiperButton";
 
 const HomeSwiper = () => {
   const images = [
-    "/img1.jfif",
-    "/img2.jfif",
-    "/img3.jfif",
-    "/img4.jfif",
-    "/img5.jfif",
+    "/image1.jpg",
+    "/image2.jpg",
   ];
   return (
-    <div>
+    <div className={style.container}>
       <Swiper
         modules={[Navigation, Pagination, Autoplay, A11y]}
-        navigation={true}
+        // navigation={true}
         loop={true}
         autoplay={{ delay: 4000 }}
         pagination={{ clickable: true }}
@@ -32,6 +28,7 @@ const HomeSwiper = () => {
             <img className={style.images} src={item} />
         </SwiperSlide>
         })}
+        <SwiperButton/>
       </Swiper>
     </div>
   );
