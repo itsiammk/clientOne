@@ -3,6 +3,7 @@ import {data} from '@/apis/galleryData'
 import { useRouter } from 'next/router'
 import { useMediaQuery } from 'react-responsive';
 
+
 const GalleryHome = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const homeData = data?.slice(0, isMobile ? 2 : 4)
