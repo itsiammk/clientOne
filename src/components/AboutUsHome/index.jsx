@@ -13,11 +13,7 @@ const AboutUsHome = ({page}) => {
   const router = useRouter()
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const images = [
-    "/img1.jfif",
-    "/img2.jfif",
-    "/img3.jfif",
-    "/img4.jfif",
-    "/img5.jfif",
+    "/img8.jpeg"
   ];
 
   return (
@@ -49,26 +45,11 @@ const AboutUsHome = ({page}) => {
               </button>
             </div>}
           </div>
-          {!isMobile && <div className={`${style.imageContainer} pl-5 ml-10`}>
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay, A11y]}
-              navigation={false}
-              loop={true}
-              autoplay={{ delay: 3000 }}
-              pagination={{ clickable: true }}
-              className="mySwiper"
-            >
-              {images.map((item)=>{
-              return <SwiperSlide>
-                  <img
-                    className={`${style.image} object-cover object-center rounded`}
-                    alt="hero"
-                    src={item}
-                  />
-              </SwiperSlide>
-              })}
-            </Swiper>
-          </div>}
+          {!isMobile && <img
+              className={`${style.image} object-cover object-center rounded`}
+              alt="hero"
+              src={images[0]}
+            />}
         </div>
       </section>
     </div>

@@ -12,3 +12,9 @@
 .cardImage{
     height: 220px;
 }
+.mainCard:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    z-index: 999;
+    position: absolute;
+}

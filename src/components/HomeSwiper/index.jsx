@@ -11,8 +11,8 @@ import Image from "next/image";
 
 const HomeSwiper = () => {
   const images = [
-    "/img1.jfif",
-    "/img2.jfif",
+    "/img7.jpeg",
+    "/img6.jpeg",
     "/img3.jfif",
     "/img4.jfif",
     "/img5.jfif",
@@ -23,7 +23,7 @@ const HomeSwiper = () => {
         modules={[Navigation, Pagination, Autoplay, A11y]}
         navigation={true}
         loop={true}
-        autoplay={{ delay: 4000 }}
+        autoplay={{ delay: 16000 }}
         pagination={{ clickable: true }}
         className="mySwiper"
       >

@@ -1,9 +1,11 @@
 .image{
     height: 400px;
     width: 100%;
+    width: 600px !important;
+    margin-left: 20px;
 }
 .imageContainer{
-    width: 600px;
+    width: 600px !important;
 }
 .para{
     @media (max-width: 768px) {
