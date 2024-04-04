@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import serviceapi from '@/api/servicesApi';
+import serviceapi from '@/apis/servicesApi';
 import Card from "../Common/Card";
 import style from './style.module.scss'
 

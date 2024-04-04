@@ -1,5 +1,5 @@
 import React from 'react'
-import {data} from '@/api/galleryData'
+import {data} from '@/apis/galleryData'
 import { useRouter } from 'next/router'
 import { useMediaQuery } from 'react-responsive';
 

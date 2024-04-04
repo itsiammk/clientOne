@@ -6,7 +6,7 @@ import style from "./style.module.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import serviceapi from "@/api/servicesApi";
+import serviceapi from "@/apis/servicesApi";
 import Image from "next/image";
 
 const HomeSwiper = () => {

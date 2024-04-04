@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { data } from "@/api/galleryData";
+import { data } from "@/apis/galleryData";
 
 const Gallery = () => {
   const [currentTag, setCurrentTag] = useState(null);
