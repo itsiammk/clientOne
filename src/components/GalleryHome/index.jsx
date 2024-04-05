@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {data} from '@/apis/galleryData'
 import { useRouter } from 'next/router'
 import { useMediaQuery } from 'react-responsive';
+import { BrowserView, MobileView, isBrowser, isMobile, isMobileOnly } from 'react-device-detect';
 
 
 const GalleryHome = () => {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(()=>{
+    setIsMobile(isMobile)
+  },[isMobileOnly])
+  // const isMobile = useMediaQuery({ maxWidth: 768 });
   const homeData = data?.slice(0, isMobile ? 2 : 4)
   const router = useRouter()
   return (

@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useMediaQuery } from 'react-responsive';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
 import style from "./style.module.scss";
+import { BrowserView, MobileView, isBrowser, isMobile, isMobileOnly } from 'react-device-detect';
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,7 +12,10 @@ import "swiper/css/pagination";
 
 const AboutUsHome = ({page}) => {
   const router = useRouter()
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(()=>{
+    setIsMobile(isMobile)
+  },[isMobileOnly])
   const images = [
     "/img8.jpeg"
   ];
