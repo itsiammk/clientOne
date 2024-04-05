@@ -1,14 +1,54 @@
+.mainBox {
+    position: relative;
+    margin-top: 15vh;
+    @media (max-width: 768px) {
+        margin-top: 10vh;
+    }
+}
 .image{
     height: 400px;
     width: 100%;
     width: 600px !important;
     margin-left: 20px;
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 .imageContainer{
     width: 600px !important;
 }
 .para{
+    width: 40vw;
+    color: white;
+    font-size: 19px;
     @media (max-width: 768px) {
-        font-size: 13px;
+        display: none;
+    }
+    padding-top: 10px;
+}
+.textBox {
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 19px 0 rgba(0,0,0,.3);
+    @media (max-width: 768px) {
+        box-shadow: none;
+        background-color: transparent;
+        text-align: center;
+        align-items: center;
+    }
+    h1 {
+        display: inline-block;
+        padding-right: 20px;
+        color: white;
+        border-right: 20px solid rgb(79 70 229);
+        font-size: 60px;
+        height: 48px;
+        @media (max-width: 768px) {
+            font-size: 20px;
+            height: 25px;
+            border-right: 10px solid rgb(79 70 229);
+            display: none;
+        }
     }
 }

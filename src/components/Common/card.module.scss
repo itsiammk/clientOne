@@ -17,4 +17,8 @@
     transition: 0.5s;
     z-index: 999;
     position: absolute;
+    background-color: rgba(0, 21, 254, 0.126);
+    @media (max-width: 768px) {
+        transform: none;
+    }
 }

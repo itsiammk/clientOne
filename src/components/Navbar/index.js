@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import style from "./style.module.scss";
 
@@ -20,9 +20,25 @@ const menuItems = {
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [scrolledMid, setScrolledMid] = useState(false);
+
   const handleNavbar = () => {
     setNavbarOpen((prevData) => !prevData);
   };
+
+  const handleScroll = () => {
+    if (window.scrollY >= 100) {
+      setScrolledMid(true);
+    } else {
+      setScrolledMid(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const navbarMenuOpen = () => {
     return (
       <svg
@@ -63,7 +79,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`bg-white shadow-lg sticky top-0 ${style.main}`}>
+      <nav className={`bg-white shadow-lg sticky top-0 ${style.main} ${(scrolledMid || navbarOpen) && style.scrollClass}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -74,7 +90,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="hidden md:block">
-              <NavItemsDesktop handleNavbar={handleNavbar} />
+              <NavItemsDesktop handleNavbar={handleNavbar} scrolledMid={scrolledMid} />
             </div>
             <div className="md:hidden flex items-center">
               <button
@@ -94,12 +110,12 @@ const Navbar = () => {
 
 export default Navbar;
 
-const NavItemsDesktop = ({handleNavbar}) => {
+const NavItemsDesktop = ({handleNavbar, scrolledMid}) => {
   const commonData = menuItems?.names?.map((item, index) => (
     <Link
       key={index}
       href={menuItems?.redirection[index]}
-      className={`px-5 text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]} hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
+      className={`${!scrolledMid && style.navItem} px-5 text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]} hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
     >
       {item}
     </Link>
@@ -112,7 +128,7 @@ const NavItemsMobile = ({handleNavbar}) => {
     <Link
       key={index}
       href={menuItems?.redirection[index]}
-      className={`px-5 block text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]} hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
+      className={`${style.navItemMobile} px-5 block text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]} hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
     >
       {item}
     </Link>

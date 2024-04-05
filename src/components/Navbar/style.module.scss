@@ -3,6 +3,11 @@
   height: 70px;
   justify-content: center;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.177) !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .service-main-container {
     margin-top: 5rem;
@@ -53,4 +58,18 @@
   .logo{
     width: 250px;
     height: 65px;
+  }
+  .scrollClass {
+    background-color: white !important;
+  }
+  .navItem {
+    background-color: transparent !important;
+    font-size: 18px;
+    font-weight: 300;
+    color: black !important;
+  }
+  .navItem:hover {
+    border-bottom: 4px solid blue;
+    color: black !important;
+    border-radius: 0;
   }

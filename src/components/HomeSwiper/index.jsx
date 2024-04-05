@@ -12,27 +12,10 @@ import Image from "next/image";
 const HomeSwiper = () => {
   const images = [
     "/img7.jpeg",
-    "/img6.jpeg",
-    "/img3.jfif",
-    "/img4.jfif",
-    "/img5.jfif",
   ];
   return (
-    <div>
-      <Swiper
-        modules={[Navigation, Pagination, Autoplay, A11y]}
-        navigation={true}
-        loop={true}
-        autoplay={{ delay: 16000 }}
-        pagination={{ clickable: true }}
-        className="mySwiper"
-      >
-        {images.map((item)=>{
-        return <SwiperSlide>
-            <img className={style.images} src={item} />
-        </SwiperSlide>
-        })}
-      </Swiper>
+    <div className={style.mainBox}>
+      <img className={style.images} src={images[0]} />
     </div>
   );
 };

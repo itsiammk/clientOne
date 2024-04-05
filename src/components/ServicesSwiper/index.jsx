@@ -28,7 +28,7 @@ const ServicesSwiper = () => {
         loop={true}
         autoplay={false}
         pagination={{ clickable: true }}
-        className="mySwiper"
+        className="mySwiperCard"
       >
         {serviceapi?.map((item, index) => (
           <SwiperSlide>
