@@ -8,7 +8,7 @@ import { BrowserView, MobileView, isBrowser, isMobile, isMobileOnly } from 'reac
 const GalleryHome = () => {
   const [isMobile, setIsMobile] = useState(false)
   useEffect(()=>{
-    setIsMobile(isMobile)
+    setIsMobile(isMobileOnly)
   },[isMobileOnly])
   // const isMobile = useMediaQuery({ maxWidth: 768 });
   const homeData = data?.slice(0, isMobile ? 2 : 4)
