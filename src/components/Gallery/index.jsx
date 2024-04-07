@@ -85,7 +85,7 @@ const Gallery = () => {
               <img src={modalContent} alt="Modal" className="max-w-full max-h-full" />
             )}
             <button
-              className="absolute top-0 right-0 m-3 text-black text-2xl bg-transparent hover:bg-white rounded-md p-0 w-8 h-8 transition duration-200"
+              className="absolute top-0 right-0 m-3 text-black text-2xl bg-transparent bg-white rounded-md p-0 w-8 h-8 transition duration-200"
               onClick={closeModal}
             >
               &times;
