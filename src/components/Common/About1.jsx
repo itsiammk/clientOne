@@ -1,8 +1,29 @@
+import Image from "next/image";
 import React from "react";
+import style from './card.module.scss'
 
 const About1 = () => {
   return (
-    <>
+    <div className={style.mainAbout}>
+      <div className={style.aboutUs}>
+        <div className={style.leftAbout}>
+          <h1>About Swati Enterprises</h1>
+          <p>
+            Welcome to the world of metal magic, where we've honed our skills
+            for over 12 years. We're not your ordinary metal treatment company;
+            we're small but mighty, specializing in erecting sturdy steel
+            structures, crafting all sorts of steel wonders, and creating
+            advanced Pre-Engineered Buildings (PEB). But that's not all! We're
+            also your go-to experts for engineering advice, detailed shop
+            drawings, and providing skilled workers for various construction
+            tasks. Oh, and we even help with logistics and export packing – talk
+            about versatile!
+          </p>
+        </div>
+        <div className={style.rightAbout} >
+          <Image src={'/aboutus.png'} height={500} width={500} />
+        </div>
+      </div>
       <section className="overflow-hidden pt-20 pb-12 px-10 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
@@ -615,26 +636,24 @@ const About1 = () => {
                   Make your customers happy by giving services.
                 </h2>
                 <p className="mb-5 text-base text-body-color ">
-                Swati Enterprises, a thriving presence in the metal treatment
-              industry, brings over 12 years of invaluable experience as a
-              dedicated MSME entity. Our journey from a modest beginning to a
-              prominent position has been marked by unwavering commitment and
-              expertise. We specialize in a diverse spectrum of services,
-              encompassing steel structure erection, fabrication, Pre-Engineered
-              Buildings (PEBs), engineering consultancy, detailing, and labor
-              supply for construction. 
+                  Swati Enterprises, a thriving presence in the metal treatment
+                  industry, brings over 12 years of invaluable experience as a
+                  dedicated MSME entity. Our journey from a modest beginning to
+                  a prominent position has been marked by unwavering commitment
+                  and expertise. We specialize in a diverse spectrum of
+                  services, encompassing steel structure erection, fabrication,
+                  Pre-Engineered Buildings (PEBs), engineering consultancy,
+                  detailing, and labor supply for construction.
                 </p>
                 <p className="mb-8 text-base text-body-color ">
-                Our success is anchored in a highly
-              skilled workforce, technical proficiency, and a client roster that
-              includes industry giants like AFCONS INFRASTRUCTURE LIMITED, DILIP
-              BUILDCON LIMITED, and more. At Swati Enterprises, our pledge to
-              unwavering quality and excellence remains the driving force behind
-              every project we undertake.
+                  Our success is anchored in a highly skilled workforce,
+                  technical proficiency, and a client roster that includes
+                  industry giants like AFCONS INFRASTRUCTURE LIMITED, DILIP
+                  BUILDCON LIMITED, and more. At Swati Enterprises, our pledge
+                  to unwavering quality and excellence remains the driving force
+                  behind every project we undertake.
                 </p>
-                <a
-                  className="inline-flex items-center justify-center py-3 text-base font-medium text-center border rounded-md px-7 bg:indigo-500"
-                >
+                <a className="inline-flex items-center justify-center py-3 text-base font-medium text-center border rounded-md px-7 bg:indigo-500">
                   Get Started
                 </a>
               </div>
@@ -642,7 +661,7 @@ const About1 = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

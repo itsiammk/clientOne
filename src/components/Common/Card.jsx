@@ -1,32 +1,37 @@
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
-import React from 'react'
+import * as React from 'react';
+import AspectRatio from '@mui/joy/AspectRatio';
+import Card from '@mui/joy/Card';
+import CardContent from '@mui/joy/CardContent';
+import Typography from '@mui/joy/Typography';
 import style from './card.module.scss'
 
-const Cards = ({title, info, imageSrc}) => {
+export default function BasicCard() {
   return (
-    <Box>
-        <Card className={style.mainCard}>
-            <CardMedia
-              component={'img'}
-              height={140}
-              image={imageSrc}
-              alt={'image'}
-              className={style.cardImage}
-            />
-            <CardContent>
-                <Typography className={style.title} gutterBottom variant={'h5'} component={'div'}>
-                    {title}
-                </Typography>
-                <Typography className={style.info} variant={'body2'} color={'text.secondary'}>
-                    {info}
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button size={'small'} > View more </Button>
-            </CardActions>
-        </Card>
-    </Box>
-  )
+    <Card 
+      sx={{ width: '100%' }}
+      color="neutral"
+      invertedColors={false}
+      orientation="vertical"
+      size="lg"
+      variant="soft"
+    >
+      <AspectRatio minHeight="120px" maxHeight="200px">
+        <img
+          src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+          srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+          loading="lazy"
+          alt=""
+        />
+      </AspectRatio>
+      <div>
+        <Typography level="title-lg">Bridges</Typography>
+        <Typography level="body-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere et eveniet iusto minus illum ipsa sequi excepturi. totam nesciunt eligendi porro.</Typography>
+      </div>
+      <CardContent orientation="horizontal">
+        <button className={style.button} >
+          Explore
+        </button>
+      </CardContent>
+    </Card>
+  );
 }
-
-export default Cards

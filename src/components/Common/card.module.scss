@@ -22,3 +22,41 @@
         transform: none;
     }
 }
+.button {
+    background-color: #4F46E5CC;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+.button:hover {
+    background-color: #4F46E5F1;
+}
+.mainAbout {
+    position: relative;
+    background-color: #4F46E5CC;
+}
+.aboutUs {
+    display: flex;
+    gap: 10vw;
+    padding: 12vh 50px 0 50px;
+    // background-color: #4F46E5CC;
+    
+}
+.leftAbout {
+    width: 50%;
+    h1 {
+        font-size: 33px;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+    }
+    padding-top: 10vh;
+}
+.rightAbout {
+
+}

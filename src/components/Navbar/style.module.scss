@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.177) !important;
-  position: absolute;
+  position: absolute !important;
   top: 0;
   left: 0;
   width: 100%;
@@ -61,6 +61,7 @@
   }
   .scrollClass {
     background-color: white !important;
+    position: sticky !important;
   }
   .navItem {
     background-color: transparent !important;

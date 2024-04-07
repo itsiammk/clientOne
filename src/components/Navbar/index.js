@@ -4,7 +4,7 @@ import style from "./style.module.scss";
 
 const menuItems = {
   names: ["Home", "About Us", "Services", "Career", "Projects", "Contact Us"],
-  redirection: ["/", "/", "/services", "/", "/", "/"],
+  redirection: ["/", "/about-us", "/services", "/", "/", "/"],
   textColor: ["black", "black", "black", "black", "black", "white"],
   hoverBg: [
     "indigo-500",
@@ -25,6 +25,7 @@ const Navbar = () => {
   const handleNavbar = () => {
     setNavbarOpen((prevData) => !prevData);
   };
+  console.log(scrolledMid,navbarOpen,'mk')
 
   const handleScroll = () => {
     if (window.scrollY >= 100) {
@@ -90,7 +91,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="hidden md:block">
-              <NavItemsDesktop handleNavbar={handleNavbar} scrolledMid={scrolledMid} />
+              <NavItemsDesktop scrolledMid={scrolledMid} />
             </div>
             <div className="md:hidden flex items-center">
               <button
@@ -110,7 +111,7 @@ const Navbar = () => {
 
 export default Navbar;
 
-const NavItemsDesktop = ({handleNavbar, scrolledMid}) => {
+const NavItemsDesktop = ({ scrolledMid}) => {
   const commonData = menuItems?.names?.map((item, index) => (
     <Link
       key={index}
@@ -120,7 +121,7 @@ const NavItemsDesktop = ({handleNavbar, scrolledMid}) => {
       {item}
     </Link>
   ));
-  return <div onClick={handleNavbar} className="ml-4 flex items-center space-x-4">{commonData}</div>;
+  return <div className="ml-4 flex items-center space-x-4">{commonData}</div>;
 };
 
 const NavItemsMobile = ({handleNavbar}) => {
