@@ -1,0 +1,22 @@
+.main {
+    padding-top: 60px;
+}
+.allItem {
+
+}
+.buttons {
+    @media (max-width: 768px) {
+        font-size: 12px;
+        padding: 0px 20px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+}
+.galleryOpen {
+    max-width: 70vw;
+    max-height: 70vh;
+    @media (max-width: 768px) {
+        max-width: 90vw;
+        max-height: fit-content;
+    }
+}

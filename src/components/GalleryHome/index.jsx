@@ -34,7 +34,7 @@ const GalleryHome = () => {
           <div className="w-full sm:w-3/6 lg:w-3/6 grid grid-cols-1 md:grid-cols-2 gap-4">
           {homeData?.map((item, index) => {
           return (
-            <div className="cursor-pointer" key={index}>
+            <div className="cursor-pointer" key={index} onClick={()=> router.push('/gallery')}>
               {item.type === "image" && (
                 <img
                   className="h-auto max-w-full rounded-lg"
