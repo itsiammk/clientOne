@@ -4,18 +4,18 @@ import style from "./style.module.scss";
 
 const menuItems = {
   names: ["Home", "About Us", "Services", "Career", "Projects", "Contact Us"],
-  redirection: ["/", "/about-us", "/services", "/", "/", "/"],
-  textColor: ["black", "black", "black", "black", "black", "white"],
+  redirection: ["/", "/about-us", "/services", "/", "/", "/contact-us"],
+  textColor: ["black", "black", "black", "black", "black", "black"],
   hoverBg: [
     "indigo-500",
     "indigo-500",
     "indigo-500",
     "indigo-500",
     "indigo-500",
-    "indigo-600",
+    "indigo-500",
   ],
-  bg: ["white", "white", "white", "white", "white", "indigo-500"],
-  hoverTextColor: ["white", "white", "white", "white", "white", "black"],
+  bg: ["white", "white", "white", "white", "white", "white"],
+  hoverTextColor: ["white", "white", "white", "white", "white", "white"],
 };
 
 const Navbar = () => {
