@@ -54,17 +54,20 @@
 .leftAbout {
     width: 50%;
     h1 {
-        font-size: 33px;
+        font-size: 45px;
         padding-bottom: 10px;
         text-transform: uppercase;
     }
-    padding-top: 10vh;
+    p {
+        font-weight: 300;
+    }
+    padding-top: 5vh;
     @media (max-width: 768px) {
         width: 100%;
         padding: 5px 0 50px 0;
         h1 {
-            font-size: 20px;
-            font-weight: bold;
+            font-size: 30px;
+            font-weight: 400;
         }
         p {
             font-size: 15px;
@@ -78,11 +81,18 @@
     }
 }
 .aboutOne {
-    width: 70vw;
+    // width: 70vw;
+    padding-right: 50px;
+    @media (max-width: 768px) {
+        padding-right: 0;
+    }
 }
 .companiesList {
+    display: flex;
+    gap: 20px;
     font-size: 30px;
     font-weight: lighter;
+    padding-top: 20px;
     padding-left: 20px;
     h1 {
         margin: 2px 0;
@@ -91,6 +101,8 @@
         border-left: 5px solid #4F46E5;
     }
     @media (max-width: 768px) {
+        flex-direction: column;
+        
         padding-left: 10px;
         h1 {
             font-size: 14px;
@@ -100,10 +112,10 @@
 }
 .capabilities {
     margin-top: 50px;
-    background-color: #4e46e59f;
+    // background-color: #4e46e59f;
     padding: 20px 0;
     border-radius: 10px;
-    box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.168);
+    // box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.168);
     @media (max-width: 768px) {
         h2 {
             font-size: 20px;
@@ -120,7 +132,7 @@
     margin-top: 30px;
     border-radius: 10px;
     padding: 30px 0 30px 0;
-    box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.168);
+    // box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.168);
     @media (max-width: 768px) {
         h2 {
             font-size: 20px;
@@ -131,7 +143,7 @@
     }
 }
 .clients {
-    box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.168);
+    // box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.168);
     padding: 20px 0;
     border-radius: 10px;
     @media (max-width: 768px) {
@@ -142,5 +154,16 @@
         p {
             font-size: 13px;
         }
+    }
+}
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 70px 10vw;
+    grid-gap: 5vw;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+        
     }
 }

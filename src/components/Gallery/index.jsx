@@ -89,7 +89,6 @@ const Gallery = () => {
           );
         })}
       </div>
-      {console.log(modalContent,'mc')}
       <div className={style.mediaMain}>
       <Popup open={modalOpen} closeOnDocumentClick onClose={closeModal}>
         <div className={`modal`}>

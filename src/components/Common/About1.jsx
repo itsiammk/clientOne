@@ -1,15 +1,24 @@
 import Image from "next/image";
 import React from "react";
 import style from "./card.module.scss";
+import InteractiveCard from "../InteractiveCard";
+import NumberCard from "../NumberCard";
 
 const About1 = () => {
   const companies = [
-    "AFCONS INFRASTRUCTURE LIMITED",
-    "DILIP BUILDCON LIMITED",
-    "METALFAB HIGHTECH PVT. LTD.",
-    "RENUKA EQUIPMENTS PVT. LTD.",
-    "And many more..."
+    {name: "AFCONS INFRASTRUCTURE LIMITED", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmp4bDNpvQbBJvotdomsJQQaW3WyMz6v6VBNNWVHPxA&s'},
+    {name: "DILIP BUILDCON LIMITED", image: 'https://trendlyne-media-mumbai-new.s3.amazonaws.com/profilepicture/4652_profilepicture.jpg'},
+    {name: "METALFAB HIGHTECH PVT. LTD.", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmp4bDNpvQbBJvotdomsJQQaW3WyMz6v6VBNNWVHPxA&s'},
+    {name: "RENUKA EQUIPMENTS PVT. LTD.", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmp4bDNpvQbBJvotdomsJQQaW3WyMz6v6VBNNWVHPxA&s'}
   ];  
+  const dashboard = [
+    { heading: 'ESTABLISHED in', number: 1987, plus: false },
+    { heading: 'PROJECTS COMPLETED', number: 100, plus: true },
+    { heading: 'WORK EMPLOYED', number: 26000, plus: true },
+    { heading: 'ACTIVE PROJECTS', number: 50, plus: true },
+    { heading: 'CLIENTS & PARTNERS', number: 70, plus: true },
+    { heading: 'YEARS EXPERIENCE', number: 35, plus: true },
+  ];
   return (
     <div className={style.mainAbout}>
       <div className={style.aboutUs}>
@@ -40,6 +49,11 @@ const About1 = () => {
       </div>
       <section className={`overflow-hidden pt-20 pb-12 px-20 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark ${style.section}`}>
         <div className="container mx-auto">
+        <div className={style.dashboard}>
+        {dashboard.map((item)=> {
+          return <NumberCard heading={item.heading} number={item.number} plus={item.plus} />
+        })}
+      </div>
         <div className={`flex flex-wrap items-center justify-between -mx-4 ${style.clients}`}>
             <div className="w-full px-4">
               <div className="mt-0 lg:mt-0">
@@ -53,7 +67,7 @@ const About1 = () => {
               <div className={style.companiesList}>
                 {
                   companies.map((item)=> {
-                    return <h1>{item}</h1>
+                    return <InteractiveCard heading={item.name} image={item.image} />
                   })
                 }
               </div>

@@ -25,7 +25,6 @@ const Navbar = () => {
   const handleNavbar = () => {
     setNavbarOpen((prevData) => !prevData);
   };
-  console.log(scrolledMid,navbarOpen,'mk')
 
   const handleScroll = () => {
     if (window.scrollY >= 100) {
