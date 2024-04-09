@@ -48,7 +48,7 @@ const About1 = () => {
         </div>
       </div>
       <section className={`overflow-hidden pt-20 pb-12 px-20 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark ${style.section}`}>
-        <div className="container mx-auto">
+        <div className="containerm mx-auto">
         <div className={style.dashboard}>
         {dashboard.map((item)=> {
           return <NumberCard heading={item.heading} number={item.number} plus={item.plus} />
