@@ -1,21 +1,21 @@
 const serviceapi = [
     {
       id: 1,
-      logo: "/bridge.png",
+      logo: "/bridge construction-bro.png",
       title: "Erection of Steel Structures and Bridges",
       info: "We're the builders of sturdy foundations and impressive structures that stand the test of time. Our bridges are not just connections; they're masterpieces of engineering.",
     },
     {
       id: 2,
-      logo: "https://source.unsplash.com/random/300x200",
+      logo: "/fabrication.png",
       title: "Fabrication of All Types of Steel Structures",
       info: "From intricate designs to robust industrial frameworks, we craft steel with precision and artistry. Our steel structures are more than functional; they're works of art.",
     },
     {
       id: 3,
-      logo: "https://source.unsplash.com/random/300x200",
+      logo: "/peb.png",
       title: "Pre-Engineered Building (PEB)",
-      info: "Efficiency meets innovation with our PEB solutions. We create flexible, cost-effective, and sustainable buildings that adapt to your needs.",
+      info: "Our Pre-Engineered Building (PEB) solutions redefine structural design, offering unparalleled speed in delivery and erection, ensuring your projects are not just built, but innovatively engineered for future growth.",
     },
     // {
     //   id: 4,

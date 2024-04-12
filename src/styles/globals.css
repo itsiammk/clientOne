@@ -92,3 +92,6 @@
   border-radius: 5px;
   background-color: white
 }
+.vertical-timeline::before {
+  background: rgb(22, 0, 82) !important;
+}

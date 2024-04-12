@@ -19,7 +19,7 @@ const NumberCard = ({ heading, number, plus }) => {
           ref={countUpRef}
           start={0}
           end={number}
-          duration={1.2}
+          duration={3}
           separator=","
         />
         {plus && '+'}

@@ -8,8 +8,8 @@ const About1 = () => {
   const companies = [
     {name: "AFCONS INFRASTRUCTURE LIMITED", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmp4bDNpvQbBJvotdomsJQQaW3WyMz6v6VBNNWVHPxA&s'},
     {name: "DILIP BUILDCON LIMITED", image: 'https://trendlyne-media-mumbai-new.s3.amazonaws.com/profilepicture/4652_profilepicture.jpg'},
-    {name: "METALFAB HIGHTECH PVT. LTD.", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmp4bDNpvQbBJvotdomsJQQaW3WyMz6v6VBNNWVHPxA&s'},
-    {name: "RENUKA EQUIPMENTS PVT. LTD.", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmp4bDNpvQbBJvotdomsJQQaW3WyMz6v6VBNNWVHPxA&s'}
+    {name: "METALFAB HIGHTECH PVT. LTD.", image: 'https://media.licdn.com/dms/image/C4E0BAQGWGvwlDaiz1Q/company-logo_200_200/0/1630611586705?e=2147483647&v=beta&t=szEtgXza6tIvSHK5PzHLgJ9aeLIl82VPmK6uREeJYGw'},
+    {name: "RENUKA EQUIPMENTS PVT. LTD.", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvEmjn1TLjt5geAyRsCIa5GrYAoPUCB-p_384pUlo6Vw&s'}
   ];  
   const dashboard = [
     { heading: 'ESTABLISHED in', number: 1987, plus: false },
@@ -23,9 +23,14 @@ const About1 = () => {
     <div className={style.mainAbout}>
       <div className={style.aboutUs}>
         <div className={style.leftAbout}>
-          <h1>Who are we</h1>
-          <p>
-            Welcome to the world of metal magic, where we've honed our skills
+          <h1>About Us</h1>
+        </div>
+      </div>
+      <section className={`overflow-hidden pt-20 pb-12 px-20 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark ${style.section}`}>
+        <div className="containerm mx-auto">
+          <div className={style.aboutUsText}>
+            <p>
+            Welcome to <span className={style.swatiText}>Swati Enterprises</span>, world of metal magic, where we've honed our skills
             for over 12 years. We're not your ordinary metal treatment company;
             we're small but mighty, specializing in erecting sturdy steel
             structures, crafting all sorts of steel wonders, and creating
@@ -42,13 +47,7 @@ const About1 = () => {
             building dreams or bridges, we're here to turn your vision into
             reality.
           </p>
-        </div>
-        <div className={style.rightAbout}>
-          <Image src={"/aboutus.png"} height={500} width={500} />
-        </div>
-      </div>
-      <section className={`overflow-hidden pt-20 pb-12 px-20 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark ${style.section}`}>
-        <div className="containerm mx-auto">
+          </div>
         <div className={style.dashboard}>
         {dashboard.map((item)=> {
           return <NumberCard heading={item.heading} number={item.number} plus={item.plus} />

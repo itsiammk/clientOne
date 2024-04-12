@@ -4,7 +4,7 @@ import style from "./style.module.scss";
 
 const menuItems = {
   names: ["Home", "About Us", "Services", "Career", "Projects", "Contact Us"],
-  redirection: ["/", "/about-us", "/services", "/", "/", "/contact-us"],
+  redirection: ["/", "/about-us", "/services", "/", "/projects", "/contact-us"],
   textColor: ["black", "black", "black", "black", "black", "black"],
   hoverBg: [
     "indigo-500",

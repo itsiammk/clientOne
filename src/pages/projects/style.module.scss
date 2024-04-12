@@ -1,0 +1,45 @@
+.main {
+    margin-bottom: 100px;
+}
+.title {
+    margin-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(79, 70, 229, 0.9450980392);
+    h1 {
+        font-size: 45px;
+        padding: 120px 0 50px;
+        display: inline-block;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+        @media (max-width: 768px) {
+            font-size: 35px;
+        }
+    }
+    h1::before {
+        content: "";
+        width: 80px;
+        height: 5px;
+        background: #ffffff;
+        position: absolute;
+        top: 190px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        @media (max-width: 768px) {
+            top: 175px;
+        }
+    }
+}
+.projectButtons {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-gap: 50px;
+    padding: 0 12vw;
+    margin-bottom: 50px;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+}

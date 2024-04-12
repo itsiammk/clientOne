@@ -26,6 +26,7 @@
     background-color: #4F46E5CC;
     width: 100%;
     padding: 10px 0;
+    height: 40px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -42,32 +43,56 @@
 }
 .aboutUs {
     display: flex;
+    text-align: center;
     gap: 10vw;
     padding: 12vh 50px 0 50px;
-    background-color: #4F46E5CC;
+    background-color: #4F46E5F1;
+    color: white;
     // background-color: #4F46E5CC;
+    @media (max-width: 768px) {
+        padding: 90px 20px 0;
+    }
     
 }
 .section {
-    padding: 25px 50px;
+    padding: 25px 200px;
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
 }
 .leftAbout {
-    width: 50%;
+    width: 100%;
     h1 {
         font-size: 45px;
         padding-bottom: 10px;
+        font-weight: 700;
         text-transform: uppercase;
+    }
+    h1::before {
+        content: "";
+        width: 80px;
+        height: 5px;
+        background: #ffffff;
+        position: absolute;
+        top: 200px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        @media (max-width: 768px) {
+            top: 175px;
+        }
     }
     p {
         font-weight: 300;
     }
     padding-top: 5vh;
+    padding-bottom: 5vh;
     @media (max-width: 768px) {
         width: 100%;
-        padding: 5px 0 50px 0;
+        padding: 40px 0 50px 0;
         h1 {
             font-size: 30px;
-            font-weight: 400;
+            font-weight: 600;
         }
         p {
             font-size: 15px;
@@ -129,9 +154,9 @@
     font-weight: 300;
 }
 .commitment {
-    margin-top: 30px;
+    // margin-top: 30px;
     border-radius: 10px;
-    padding: 30px 0 30px 0;
+    padding: 0px 0 30px 0;
     // box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.168);
     @media (max-width: 768px) {
         h2 {
@@ -144,7 +169,7 @@
 }
 .clients {
     // box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.168);
-    padding: 20px 0;
+    padding: 30px 0 0 0;
     border-radius: 10px;
     @media (max-width: 768px) {
         h2 {
@@ -159,11 +184,19 @@
 .dashboard {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 70px 10vw;
+    padding: 70px 0;
     grid-gap: 5vw;
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
         padding: 20px 10px;
-        
+
     }
+}
+.aboutUsText {
+    display: flex;
+}
+.swatiText {
+    font-weight: 700;
+    font-size: 20px;
+    color: #4F46E5;
 }

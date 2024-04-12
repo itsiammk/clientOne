@@ -5,27 +5,26 @@ import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
 import style from './card.module.scss'
 
-export default function BasicCard() {
+export default function BasicCard({title, info, imageSrc}) {
   return (
     <Card 
-      sx={{ width: '100%' }}
+      sx={{ width: 350}}
       color="neutral"
       invertedColors={false}
       orientation="vertical"
       size="lg"
       variant="soft"
     >
-      <AspectRatio minHeight="120px" maxHeight="200px">
+      <AspectRatio minHeight="120px" maxHeight="200px" objectFit='contain'>
         <img
-          src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
-          srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+          src={imageSrc}
           loading="lazy"
-          alt=""
+          alt={title}
         />
       </AspectRatio>
       <div>
-        <Typography level="title-lg">Bridges</Typography>
-        <Typography level="body-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere et eveniet iusto minus illum ipsa sequi excepturi. totam nesciunt eligendi porro.</Typography>
+        <Typography mb={2} level="title-lg">{title}</Typography>
+        <Typography level="body-sm">{info}</Typography>
       </div>
       <CardContent orientation="horizontal">
         <button className={style.button} >
