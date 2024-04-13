@@ -3,6 +3,8 @@ import React from "react";
 import style from "./card.module.scss";
 import InteractiveCard from "../InteractiveCard";
 import NumberCard from "../NumberCard";
+import WaveCommon from "./Wave";
+
 
 const About1 = () => {
   const companies = [
@@ -21,11 +23,7 @@ const About1 = () => {
   ];
   return (
     <div className={style.mainAbout}>
-      <div className={style.aboutUs}>
-        <div className={style.leftAbout}>
-          <h1>About Us</h1>
-        </div>
-      </div>
+      <WaveCommon text={'About Us'} />
       <section className={`overflow-hidden pt-20 pb-12 px-20 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark ${style.section}`}>
         <div className="containerm mx-auto">
           <div className={style.aboutUsText}>

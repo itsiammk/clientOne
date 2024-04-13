@@ -6,18 +6,16 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import style from "./style.module.scss";
-import HandymanSharpIcon from "@mui/icons-material/HandymanSharp";
-import { Button } from "@mui/joy";
 import { workData } from "@/apis/projectsData";
+import WaveCommon from "@/components/Common/Wave";
 
 const Projects = () => {
   const [projectData, setProjectData] = useState('all');
   const filteredData = workData?.filter((item) => projectData === 'all' ? item : item.tag === projectData)
   return (
     <div className={style.main}>
-      <div className={style.title}>
-        <h1>Projects</h1>
-      </div>
+        <WaveCommon text={'Projects'} color={'rgba(79, 70, 229, 0.9450980392)'} />
+
       <div className={style.projectButtons}>
         <button
           class="bg-blue-900 hover:bg-blue-700 focus:bg-blue-900 text-white font-bold py-2 px-4 rounded"

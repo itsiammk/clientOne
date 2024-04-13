@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import "@/styles/globals.css";
 import Head from "next/head";
+import NextNProgress from 'nextjs-progressbar';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -25,7 +26,8 @@ export default function App({ Component, pageProps }) {
             reality." />
         <title>Swati Enterprises</title>
       </Head>
-    <Layout>
+    <Layout> 
+      <NextNProgress color={'#ffffff99'} height={6} />
       <Component {...pageProps} />
     </Layout>
     </>

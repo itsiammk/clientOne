@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, Grid, Sheet, AspectRatio, Chip, Button } from "@mui/joy";
 import styles from "./style.module.scss";
+import WaveCommon from "../Common/Wave";
 
 const services = [
   {
@@ -51,16 +52,8 @@ const services = [
 const Services = () => {
   return (
     <div className={styles.main}>
-      <div className={styles.heading}>
-        <div>
-          <Typography level="h1" component="h1" className={styles.title}>
-            SERVICES
-          </Typography>
-          <Typography level="h4" component="h1" className={styles.subTitle}>
-            provided by SWATI ENTERPRISES
-          </Typography>
-        </div>
-      </div>
+      <WaveCommon text={'Services'} />
+
 
       <div className={styles.container}>
         <h1 className={styles.headingText}>
