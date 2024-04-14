@@ -1,32 +1,36 @@
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
-import React from 'react'
+import * as React from 'react';
+import AspectRatio from '@mui/joy/AspectRatio';
+import Card from '@mui/joy/Card';
+import CardContent from '@mui/joy/CardContent';
+import Typography from '@mui/joy/Typography';
 import style from './card.module.scss'
 
-const Cards = ({title, info, imageSrc}) => {
+export default function BasicCard({title, info, imageSrc}) {
   return (
-    <Box>
-        <Card className={style.mainCard}>
-            <CardMedia
-              component={'img'}
-              height={140}
-              image={imageSrc}
-              alt={'image'}
-              className={style.cardImage}
-            />
-            <CardContent>
-                <Typography className={style.title} gutterBottom variant={'h5'} component={'div'}>
-                    {title}
-                </Typography>
-                <Typography className={style.info} variant={'body2'} color={'text.secondary'}>
-                    {info}
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button size={'small'} > View more </Button>
-            </CardActions>
-        </Card>
-    </Box>
-  )
+    <Card 
+      sx={{ width: 350}}
+      color="neutral"
+      invertedColors={false}
+      orientation="vertical"
+      size="lg"
+      variant="soft"
+    >
+      <AspectRatio minHeight="120px" maxHeight="200px" objectFit='contain'>
+        <img
+          src={imageSrc}
+          loading="lazy"
+          alt={title}
+        />
+      </AspectRatio>
+      <div>
+        <Typography mb={2} level="title-lg">{title}</Typography>
+        <Typography level="body-sm">{info}</Typography>
+      </div>
+      <CardContent orientation="horizontal">
+        <button className={style.button} >
+          Explore
+        </button>
+      </CardContent>
+    </Card>
+  );
 }
-
-export default Cards

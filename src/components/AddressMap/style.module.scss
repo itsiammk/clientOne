@@ -1,0 +1,9 @@
+.leftContainer {
+    margin-bottom: 20px;
+}
+.rightMap {
+    height: 500px;
+    @media screen and (max-width: 768px) {
+       height: 300px; 
+    }
+}

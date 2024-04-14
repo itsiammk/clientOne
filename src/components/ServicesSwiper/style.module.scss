@@ -1,5 +1,62 @@
+.main {
+    text-align: center;
+    display: flex;
+    gap: 50px;
+    padding-top: 10vh;
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        padding: 15% 7%;
+    }
+}
 .line{
     width: 90%;
     margin: 0 50px;
     height: 6px;
+}
+.mySwiper {
+    height: 100px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    text-align: left;
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        padding: 0 10px;
+    }
+}
+.serviceText{
+    font-size: 55px;
+    width: 900px;
+    span {
+        padding-left: 20px;
+        border-left: 5px solid #4F46E5;
+    }
+    @media (max-width: 768px) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        width: auto;
+        gap: 10px;
+        font-size: 30px;
+    }
+}
+.button {
+    font-size: 25px;
+    background-color: #4F46E5CC;
+    padding: 8px 30px;
+    border-radius: 5px;
+    // width: 100%;
+    color: white;
+    @media (max-width: 768px) {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+}
+.button:hover {
+    background-color: #4F46E5F1;
 }

@@ -1,0 +1,19 @@
+.mainCard {
+    width: auto;
+    padding: 10px;
+    box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.111);
+
+    h1 {
+        background-color: #4e46e52d;
+        border-radius: 10px;
+        box-shadow: 0 8px 19px 0 #4e46e558;
+        padding: 10px 10px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 45px;
+        font-weight: 600;
+        text-align: center;
+        padding: 30px 10px;
+    }
+}

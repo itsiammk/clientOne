@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+.mainBox {
+    position: relative;
+    margin-top: 27vh;
+    @media (max-width: 768px) {
+        margin-top: 10vh;
+    }
+}
+.image{
+    height: 400px;
+    width: 100%;
+    width: 600px !important;
+    margin-left: 20px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+.imageContainer{
+    width: 600px !important;
+}
+.para{
+    width: 40vw;
+    color: white;
+    font-size: 19px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+    padding-top: 10px;
+}
+.textBox {
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 19px 0 rgba(0,0,0,.3);
+    @media (max-width: 768px) {
+        box-shadow: none;
+        text-align: center;
+        align-items: center;
+        padding-top: 110px;
+    }
+    h1 {
+        display: inline-block;
+        padding-right: 20px;
+        color: white;
+        border-right: 20px solid rgb(79 70 229);
+        font-size: 60px;
+        height: 48px;
+        @media (max-width: 768px) {
+            font-size: 20px;
+            height: 25px;
+            border-right: 10px solid rgb(79 70 229);
+            display: none;
+        }
+    }
+}
+/* style.module.scss */
+.animationText {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  white-space: nowrap; /* Prevent the text from wrapping */
+  overflow: hidden; /* Hide the text until the animation starts */
+  border-right: 0.15em solid transparent; /* Create a blinking cursor effect */
+  animation: writing-effect 4s steps(18) infinite, blink 1s infinite;
+}
+
+@keyframes writing-effect {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
