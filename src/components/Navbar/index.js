@@ -3,11 +3,12 @@ import Link from "next/link";
 import style from "./style.module.scss";
 import { useRouter } from "next/router";
 import { useAppContext } from "@/context/AppContext";
+import SearchBar from "../searchBar/search";
 
 const menuItems = {
   names: ["Login", "Trending", 'cart'],
   icon: ['user.png','trending-topic.png','shopping-cart.png'],
-  redirection: ["/", "/Trending",''],
+  redirection: ["/singin", "/Trending",''],
   textColor: ["black", "black", "black", "black", "black", "white"],
   hoverBg: [
     "indigo-500",
@@ -86,10 +87,7 @@ const Navbar = () => {
                   <img className={style.logo} src='/EcomLogo.jpg' />
                 </Link>
               </div>
-              <div className={style.searchBar}>
-                <input className={style.inputTag} placeholder="Search.." onChange={handleChange} onKeyPress={handleKeyPress}/>
-                  <img className = {style.searchIcon} src='/search.png' onClick={handleRoute}/>
-              </div>
+              <SearchBar handleChange = {handleChange} handleKeyPress = {handleKeyPress} handleRoute = {handleRoute}/>
             </div>
             <div className="hidden md:block">
               <NavItemsDesktop handleNavbar={handleNavbar} />
@@ -125,9 +123,9 @@ const NavItemsDesktop = ({handleNavbar}) => {
       router.push(menuItems?.redirection[index])
     }
   } 
-  useEffect(()=>{
-    console.log(srpReducer.cartCount,'cartCount',state)
-  },[state])
+  // useEffect(()=>{
+  //   console.log(srpReducer.cartCount,'cartCount',state)
+  // },[state])
   const commonData = menuItems?.names?.map((item, index) => (
     <a
       key={index}

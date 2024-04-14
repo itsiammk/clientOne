@@ -3,4 +3,5 @@ export const srpInitalState = {
     numberOfProduct: {},
     isPopUpOpen: false,
     cartValue: {}
+    
 }

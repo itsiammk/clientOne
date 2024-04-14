@@ -3,7 +3,7 @@ export const srpReducer = (state, action) => {
         case 'COUNT':
             return {
                 ...state,
-                cartCount: state.cartCount + 1
+                cartCount: action.payload
             };
         case 'PopHandle':
             return {

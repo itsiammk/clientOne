@@ -11,6 +11,7 @@ export default function Home() {
     setPopUpVisible(false)
     dispatch({type: 'PopHandle', payload: false})
   }
+  
   return (
     <>
       <Popup popUpVisible={popUpVisible} onClose = {onClose}/>

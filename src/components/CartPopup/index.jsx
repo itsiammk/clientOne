@@ -5,10 +5,10 @@ import CartItem from '../cartItem';
 const Popup = ({ onClose, popUpVisible ,children}) => {
     const {state, dispatch} = useAppContext()
     const {srpReducer} = state
+    console.log(srpReducer.cartValue,'children')
     const handleClose = () =>{
         dispatch({type: 'PopHandle', payload: false})
     }
-    console.log(children,'children')
   return (
     <>
     {(srpReducer.isPopUpOpen)  && <div className={style.popup}>

@@ -15,7 +15,7 @@ const product = () => {
             fetchData()
         }
     },[trending])
-    console.log(productData,'hello')
+    console.log(router,'hello')
     return (
         <div>
             <h6>{productData?.title}</h6>

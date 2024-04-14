@@ -1,21 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Style from './style.module.scss'
-import { useFormik } from 'formik'
-import * as Yup from "yup"
 import { getAllProduct } from './apiService'
 import { useRouter } from 'next/router'
 import { useAppContext } from '@/context/AppContext'
+import { getCartDetails } from '../api/serviceAPI'
 
 const Trending = () => {
-    const router = useRouter()
-    const buyButtonRef = useRef();
-    const [allData, setAllData] = useState({})
-    const {state, dispatch} = useAppContext()
+    const router = useRouter();
+    const [allData, setAllData] = useState({});
+    const [allCartData, setAllCartData] = useState({});
+    const { state, dispatch } = useAppContext();
+    const { srpReducer } = state;
     const [selectedProducts, setSelectedProducts] = useState({});
-    const {srpReducer} = state
-    useEffect(()=>{
-        // setCartCount(srpReducer.cartCount)
-    },[srpReducer])
+    const [dispatchCount, setDispatchCount] = useState(0);
+    const buyButtonRef = useRef();
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -27,69 +26,80 @@ const Trending = () => {
         };
         fetchData();
     }, []);
-    const handleClick = (e, index) => {
-        // console.log(buyButtonRef,e,'helloo',buyButtonRef.current.contains(e.target))
-        // router.push(`/Trending/${index}`);
-        // if (buyButtonRef.current && !buyButtonRef.current.contains(e.target)) {
-        // }
-    };
+    console.log(router.query,'router')
+    useEffect(() => {
+        // Only dispatch when selectedProducts changes
+        if (dispatchCount > 0) {
+            const productsArray = Object.values(selectedProducts).map(product => ({
+                product: product.title,
+                images: product.images,
+                price: product.price
+            }));
+            dispatch({ type: 'HandleCart', payload: productsArray });
+            console.log(productsArray, '12345', srpReducer.cartValue);
+        }
+    }, [selectedProducts, dispatchCount]);
+
     const buyClickHandle = (e, product) => {
-        // Dispatching 'COUNT' action, if necessary
-        dispatch({type: 'COUNT'});
-        
-        // Preventing event propagation
-        // e.stopPropagation();
-        
-        // Updating the state based on the product's presence
+        // dispatch({ type: 'COUNT' });
+        e.stopPropagation();
+
+        console.log(product,"prevState")
         setSelectedProducts(prevState => {
-            // Check if the product is already selected
             if (prevState[product.id]) {
-                // If selected, increase the quantity
                 return {
                     ...prevState,
-                    [product.id]: {
-                        ...prevState[product.id],
-                        quantity: prevState[product.id].quantity + 1
-                    }
+                        product: prevState[product.title],
+                        price: prevState[product.price],
+                        images: prevState[product.images[0]]
+                    
                 };
             } else {
-                // If not selected, add the product with quantity 1
                 return {
                     ...prevState,
-                    [product.id]: {
-                        id: product.id,
-                        quantity: 1
-                    }
+                        product: product.title,
+                        price: product.price,
+                        images: product.images[0]
                 };
             }
         });
-        setTimeout(()=>{
-            console.log(productsArray,'hellothere',selectedProducts)
-        },200)
-        dispatch({type:'HandleCart', payload: productsArray})
+        console.log(selectedProducts,'piyush')
+        setDispatchCount(prevCount => prevCount + 1);
     }
-    const productsArray = Object.values(selectedProducts).map(product => ({
-        id: product.id,
-        quantity: product.quantity
-    }));
-        console.log(productsArray,'12345',srpReducer.cartValue)
+    // const [allData]
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await getCartDetails(selectedProducts);
+                console.log("Cart data received:", data);
+                dispatch({type: 'COUNT' , payload : data.userData.cart.length})
+                setAllCartData(data);
+            } catch (error) {
+                console.error('Error fetching cart data:', error);
+            }
+        };
+        fetchData();
+    }, [JSON.stringify(selectedProducts)]);
+    
     return (
-        <>
-            <div className={Style.gridContainer} ref={buyButtonRef}>
-                {allData?.products?.map((item, index) => (
-                    <div  key={index} className={Style.gridItem} onClick={(e)=>handleClick(e,item?.id)}>
-                        <h6 >{item.title}</h6>
-                        <img className={Style.img} src={item.images[0]} alt={item.title} />
-                        <button className={Style.buyButton} ref={buyButtonRef} onClick={(e)=>buyClickHandle(e,item)}>Buy Now</button>
-                    </div>
-                ))}
-            </div>
-
-        </>
+        <div className={Style.gridContainer}>
+            {allData?.products?.map((item, index) => (
+                <div key={index} className={Style.gridItem}>
+                    <h6>{item.title}</h6>
+                    <img className={Style.img} src={item.images[0]} alt={item.title} />
+                    {selectedProducts[item.id] ? (
+                        <button className={Style.buyButton} onClick={(e) => buyClickHandle(e, item)}>Remove</button>
+                    ) : (
+                        <button className={Style.buyButton} ref={buyButtonRef} onClick={(e) => {buyClickHandle(e, item)}}>Buy Now</button>
+                    )}
+                </div>
+            ))}
+        </div>
     )
 }
 
-export default Trending
+export default Trending;
+
 
 
 
