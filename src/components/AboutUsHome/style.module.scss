@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
 .mainBox {
     position: relative;
     margin-top: 27vh;
@@ -33,7 +34,6 @@
     box-shadow: 0 8px 19px 0 rgba(0,0,0,.3);
     @media (max-width: 768px) {
         box-shadow: none;
-        background-color: transparent;
         text-align: center;
         align-items: center;
         padding-top: 110px;
@@ -52,4 +52,30 @@
             display: none;
         }
     }
+}
+/* style.module.scss */
+.animationText {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  white-space: nowrap; /* Prevent the text from wrapping */
+  overflow: hidden; /* Hide the text until the animation starts */
+  border-right: 0.15em solid transparent; /* Create a blinking cursor effect */
+  animation: writing-effect 4s steps(18) infinite, blink 1s infinite;
+}
+
+@keyframes writing-effect {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }

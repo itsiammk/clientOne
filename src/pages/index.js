@@ -1,4 +1,5 @@
 import AboutUsHome from "@/components/AboutUsHome";
+import AddressMap from "@/components/AddressMap";
 import Gallery from "@/components/Gallery";
 import GalleryHome from "@/components/GalleryHome";
 import HomeSwiper from "@/components/HomeSwiper";
@@ -14,6 +15,7 @@ export default function Home() {
       {/* <OurServices /> */}
       <ServicesSwiper />
       <GalleryHome />
+      <AddressMap />
       {/* <Map /> */}
     </>
   );

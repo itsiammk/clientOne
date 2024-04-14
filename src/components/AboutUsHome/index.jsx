@@ -18,8 +18,7 @@ const AboutUsHome = ({page}) => {
         <div className="container mx-auto flex px-5 py-8 lg:py-24 md:flex-row flex-col items-left">
           <div className={style.textBox}>
             <h1 className="title-font sm:text-4xl text-2xl mb-4 font-medium text-gray-900">
-              SWATI ENTERPRISES
-            </h1>
+              <span className={style.animationText}>SWATI ENTERPRISES</span>            </h1>
             <p className={`${style.para} mb-8 leading-relaxed`}>
               Swati Enterprises, a thriving presence in the metal treatment
               industry, brings over 12 years of invaluable experience as a

@@ -4,14 +4,15 @@ import style from "./card.module.scss";
 import InteractiveCard from "../InteractiveCard";
 import NumberCard from "../NumberCard";
 import WaveCommon from "./Wave";
+import BioCard from "../BioCard";
 
 
 const About1 = () => {
   const companies = [
-    {name: "AFCONS INFRASTRUCTURE LIMITED", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmp4bDNpvQbBJvotdomsJQQaW3WyMz6v6VBNNWVHPxA&s'},
-    {name: "DILIP BUILDCON LIMITED", image: 'https://trendlyne-media-mumbai-new.s3.amazonaws.com/profilepicture/4652_profilepicture.jpg'},
-    {name: "METALFAB HIGHTECH PVT. LTD.", image: 'https://media.licdn.com/dms/image/C4E0BAQGWGvwlDaiz1Q/company-logo_200_200/0/1630611586705?e=2147483647&v=beta&t=szEtgXza6tIvSHK5PzHLgJ9aeLIl82VPmK6uREeJYGw'},
-    {name: "RENUKA EQUIPMENTS PVT. LTD.", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvEmjn1TLjt5geAyRsCIa5GrYAoPUCB-p_384pUlo6Vw&s'}
+    {name: "AFCONS INFRASTRUCTURE LIMITED", image: '/afcons.png'},
+    {name: "DILIP BUILDCON LIMITED", image: '/dilip.jpg'},
+    {name: "METALFAB HIGHTECH PVT. LTD.", image: '/metafab.jpeg'},
+    {name: "RENUKA EQUIPMENTS PVT. LTD.", image: '/renuka.jpeg'}
   ];  
   const dashboard = [
     { heading: 'ESTABLISHED in', number: 1987, plus: false },
@@ -45,6 +46,9 @@ const About1 = () => {
             building dreams or bridges, we're here to turn your vision into
             reality.
           </p>
+          <div>
+            <BioCard />
+          </div>
           </div>
         <div className={style.dashboard}>
         {dashboard.map((item)=> {

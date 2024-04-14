@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {data} from '@/apis/galleryData'
 import { useRouter } from 'next/router'
-import { useMediaQuery } from 'react-responsive';
+import style from './style.module.scss'
 import { BrowserView, MobileView, isBrowser, isMobile, isMobileOnly } from 'react-device-detect';
 
 
@@ -17,7 +17,7 @@ const GalleryHome = () => {
     <div>
           <div>
       <section className="text-gray-700 body-font">
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div className={`container mx-auto flex px-5 py-24 md:flex-row flex-col items-center ${style.mediaHome}`}>
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 className="title-font sm:text-4xl text-5xl mb-4 font-medium text-gray-900">
               Gallery

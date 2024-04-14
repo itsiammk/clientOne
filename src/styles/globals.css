@@ -38,13 +38,13 @@
 .mySwiperCard {
   height: 580px;
 }
-.MuiCard-colorNeutral {
+/* .MuiCard-colorNeutral {
   background-color: #4e46e51d;
 }
 .MuiCard-colorNeutral:hover {
   background-color: #4e46e534;
   transition: 0.5s;
-}
+} */
 .modal {
   font-size: 12px;
 }
