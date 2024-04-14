@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import style from "./style.module.scss";
+import { useRouter } from "next/router";
 
 const menuItems = {
   names: ["Home", "About Us", "Services", "Career", "Projects", "Contact Us"],
@@ -22,6 +23,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [scrolledMid, setScrolledMid] = useState(false);
 
+  const router = useRouter();
   const handleNavbar = () => {
     setNavbarOpen((prevData) => !prevData);
   };
@@ -110,28 +112,39 @@ const Navbar = () => {
 
 export default Navbar;
 
-const NavItemsDesktop = ({ scrolledMid}) => {
+const NavItemsDesktop = ({handleNavbar, scrolledMid}) => {
+  const router = useRouter();
+
+  const handleNavigation = (index) => {
+    router.push(menuItems?.redirection[index])
+  }
+
   const commonData = menuItems?.names?.map((item, index) => (
-    <Link
+    <a
       key={index}
-      href={menuItems?.redirection[index]}
-      className={`${!scrolledMid && style.navItem} px-5 text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]} hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
+      onClick={()=>handleNavigation(index)}
+      className={`${!scrolledMid && style.navItem} px-5 text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]} hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2 cursor-pointer`}
     >
       {item}
-    </Link>
+    </a>
   ));
   return <div className="ml-4 flex items-center space-x-4">{commonData}</div>;
 };
 
 const NavItemsMobile = ({handleNavbar}) => {
+  const router = useRouter();
+
+  const handleNavigation = (index) => {
+    router.push(menuItems?.redirection[index])
+  }
   const commonData = menuItems?.names?.map((item, index) => (
-    <Link
+    <a
       key={index}
-      href={menuItems?.redirection[index]}
+      onClick={()=>handleNavigation(index)}
       className={`${style.navItemMobile} px-5 block text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]} hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2`}
     >
       {item}
-    </Link>
+    </a>
   ));
   return (
     <div onClick={handleNavbar} className="md:hidden bg-white">
