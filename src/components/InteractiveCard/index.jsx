@@ -6,7 +6,7 @@ import CardContent from '@mui/joy/CardContent';
 import Chip from '@mui/joy/Chip';
 import Typography from '@mui/joy/Typography';
 
-export default function InteractiveCard({heading, image, width}) {
+export default function InteractiveCard({heading, image, width, isMobile}) {
   return (
     <Card
       variant="outlined"
@@ -26,7 +26,7 @@ export default function InteractiveCard({heading, image, width}) {
         />
       </AspectRatio>
       <CardContent>
-        <Typography level="title-lg" id="card-description">
+        <Typography level={isMobile ? 'h2' : "title-lg"} id="card-description">
           {heading}
         </Typography>
         {/* <Typography level="body-sm" aria-describedby="card-description" mb={1}>

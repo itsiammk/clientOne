@@ -1,73 +1,82 @@
 export const workData = [
-    {
-      date: "2011 - present",
-      title: "Creative Director",
-      subtitle: "Nagpur, Maharashtra",
-      description: "Cotton Market Metro Station",
-      iconStyle: { background: "#048848", color: "#fff" },
-      contentStyle: { background: "#048848", color: "#fff" },
-      contentArrowStyle: { borderRight: "7px solid  #048848" },
-      tag: 'ongoing'
-    },
-    {
-      date: "2010 - 2011",
-      title: "Art Director",
-      subtitle: "Nagpur, Maharashtra",
-      description:
-        "SSP PLANT (INDORAMA) Butibori",
-      iconStyle: { background: "#048848", color: "#fff" },
-      contentStyle: { background: "#048848", color: "#fff" },
-      contentArrowStyle: { borderRight: "7px solid  #048848" },
-      tag: 'ongoing'
-    },
-    {
-      date: "2008 - 2010",
-      title: "Web Designer",
-      subtitle: "Tirupati, Andhar Pradesh",
-      description: "Railway over bridge (ROB)",
-      iconStyle: { background: "#048848", color: "#fff" },
-      contentStyle: { background: "#048848", color: "#fff" },
-      contentArrowStyle: { borderRight: "7px solid  #048848" },
-      tag: 'ongoing'
-    },
-    {
-      date: "2006 - 2008",
-      title: "Web Designer",
-      subtitle: "Wardha, MH",
-      description: "Wardha-Nanded New B G, Railway over bridge (ROB) ",
-      iconStyle: { background: "rgb(237,145,7)", color: "#fff" },
-      contentStyle: { background: "rgb(237,145,7)", color: "#fff" },
-      contentArrowStyle: { borderRight: "7px solid  rgb(237,145,7)" },
-      tag: 'upcoming'
-    },
-    {
-        date: "April 2013",
-        title: "Content Marketing for Web, Mobile and Social Media",
-        subtitle: "Online Course",
-        description: "Strategy, Social Media",
-        iconStyle: { background: "rgb(237,145,7)", color: "#fff" },
-        contentStyle: { background: "rgb(237,145,7)", color: "#fff" },
-        contentArrowStyle: { borderRight: "7px solid  rgb(237,145,7)" },
-        tag: 'upcoming' 
-      },
-      {
-        date: "November 2012",
-        title: "Agile Development Scrum Master",
-        subtitle: "Certification",
-        description: "Four Lane from Km 42+00 to 80+00 of Dodballapur bypass to Hoskote section of NH-648 (old NH 207)",
-        iconStyle: { background: "rgb(235, 7, 7)", color: "#fff" },
-        contentStyle: { background: "rgb(235, 7, 7)", color: "#fff" },
-        contentArrowStyle: { borderRight: "7px solid  rgb(235, 7, 7)" },  
-        tag: 'closed'
-      },
-      {
-        date: "2002 - 2006",
-        title: "Bachelor of Science in Interactive Digital Media Visual Imaging",
-        subtitle: "Bachelor Degree",
-        description: "Creative Direction, Visual Design",
-        iconStyle: { background: "rgb(235, 7, 7)", color: "#fff" },
-        contentStyle: { background: "rgb(235, 7, 7)", color: "#fff" },
-        contentArrowStyle: { borderRight: "7px solid  rgb(235, 7, 7)" },  
-        tag: 'closed'
-      }
-  ];
+  {
+    date: "Ongoing",
+    title: "Prajapati Nagar Station FOB for South Entry-Exit - Nagpur, Maharashtra",
+    subtitle: "Erection of Elevated FOB for Entry-Exit",
+    description: "Erection activities completed with quality and proper safety measures.",
+    iconStyle: { background: "#048848", color: "#fff" },
+    contentStyle: { background: "#048848", color: "#fff" },
+    contentArrowStyle: { borderRight: "7px solid #048848" },
+    tag: 'ongoing'
+  },
+  {
+    date: "Completed (2023)",
+    title: "Cotton Market Metro Station - Nagpur, Maharashtra",
+    subtitle: "Erection of station PEB Structure, All Staircase & Station Link Bridge",
+    description: "All PEB structures, staircases, and link bridge erection activities were completed with proper safety measures and within the given timeframe.",
+    iconStyle: { background: "#048848", color: "#fff" },
+    contentStyle: { background: "#048848", color: "#fff" },
+    contentArrowStyle: { borderRight: "7px solid #048848" },
+    tag: 'ongoing'
+  },
+  {
+    date: "Completed (2023)",
+    title: "SSP PLANT (INDORAMA) Butibori - Nagpur, Maharashtra",
+    subtitle: "1) Structural Erection of SSP Plant (Height +66.00 Mtrs), 2) Erection of Pipe racks",
+    description: "All erection activities were done with proper safety measures and quality.",
+    iconStyle: { background: "#048848", color: "#fff" },
+    contentStyle: { background: "#048848", color: "#fff" },
+    contentArrowStyle: { borderRight: "7px solid #048848" },
+    tag: 'ongoing'
+  },
+  {
+    date: "Completed (2023)", 
+    title: "Railway over bridge (ROB) – Tirupati, Andhra Pradesh",
+    subtitle: "6 nos, 60 Mtrs Steel Girder (ROB)",
+    description: "All steel girder works were carried out as per RDSO & Railway norms with proper safety measures.",
+    iconStyle: { background: "#048848", color: "#fff" },
+    contentStyle: { background: "#048848", color: "#fff" },
+    contentArrowStyle: { borderRight: "7px solid #048848" },
+    tag: 'ongoing'
+  },
+  {
+    date: "Completed (2023)",
+    title: "Wardha-Nanded New BG, Railway over bridge (ROB) – Wardha, Maharashtra", 
+    subtitle: "36 Mtrs ROB steel girder (RDSO)",
+    description: "All steel girder works were as per RDSO & Railway norms with quality and proper safety.",
+    iconStyle: { background: "rgb(237,145,7)", color: "#fff" },
+    contentStyle: { background: "rgb(237,145,7)", color: "#fff" },
+    contentArrowStyle: { borderRight: "7px solid rgb(237,145,7)" },
+    tag: 'upcoming'
+  },
+  {
+    date: "Upcoming",
+    title: "3900 MT, ROB(36 Mtrs & 18 Mtrs span) on Wardha-Nanded New BG - Yavatmal, Maharashtra",
+    subtitle: "Railway over bridge (ROB)",
+    description: "Project for Central Railway.",
+    iconStyle: { background: "rgb(237,145,7)", color: "#fff" },
+    contentStyle: { background: "rgb(237,145,7)", color: "#fff" },
+    contentArrowStyle: { borderRight: "7px solid rgb(237,145,7)" },
+    tag: 'upcoming'
+  },
+  {
+    date: "Upcoming",
+    title: "Bow String Girder 42 Mtrs (RDSO) - Chipurpalle (ROB 1451), Vishakhapatnam, Andhra Pradesh", 
+    subtitle: "Railway over bridge (ROB)",
+    description: "Project for East Coast Railway.",
+    iconStyle: { background: "rgb(237,145,7)", color: "#fff" },
+    contentStyle: { background: "rgb(237,145,7)", color: "#fff" },
+    contentArrowStyle: { borderRight: "7px solid rgb(237,145,7)" },
+    tag: 'upcoming'
+  },
+  {
+    date: "Completed (2023)",
+    title: "Four Lane NH-648 Dodballapur bypass to Hoskote - Karnataka",
+    subtitle: "Assembly & Erection of FOB (62+380)", 
+    description: "Erection activities completed with quality and proper safety measures.",
+    iconStyle: { background: "rgb(235, 7, 7)", color: "#fff" },
+    contentStyle: { background: "rgb(235, 7, 7)", color: "#fff" },
+    contentArrowStyle: { borderRight: "7px solid rgb(235, 7, 7)" },
+    tag: 'closed'
+  }
+];

@@ -95,3 +95,6 @@
 .vertical-timeline::before {
   background: rgb(22, 0, 82) !important;
 }
+.mySwiper {
+  padding-bottom: 40px !important;
+}

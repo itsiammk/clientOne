@@ -16,7 +16,7 @@ export default function Home() {
       {/* <OurServices /> */}
       <ServicesSwiper />
       <GalleryHome />
-      <AddressMap />
+      {/* <AddressMap /> */}
       <Scroller />
     </>
   );

@@ -125,10 +125,7 @@
         padding-left: 30px;
         border-left: 5px solid #4F46E5;
     }
-    @media (max-width: 768px) {
-        flex-direction: column;
-        
-        padding-left: 10px;
+    @media (max-width: 768px) {        
         h1 {
             font-size: 14px;
             padding-left: 10px;
@@ -193,15 +190,15 @@
     }
 }
 .aboutUsText {
-    display: flex;
-    gap: 100px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 100px;
+    justify-content: space-between;
     @media (max-width: 768px) {
+        display: flex;
         flex-direction: column;
         gap: 20px;
-        div {
-            width: auto;
-        }
-
+        align-items: center;
     }
 }
 .swatiText {

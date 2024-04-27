@@ -20,7 +20,7 @@ const Footer = () => {
   };
 
   const handleEmailClick = () => {
-    const mailtoUrl = `mailto:maheshkblog@gmail.com`;
+    const mailtoUrl = `mailto:info.senterprises1122@gmail.com`;
     window.open(mailtoUrl, "_blank");
   };
 

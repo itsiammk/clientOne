@@ -16,14 +16,14 @@ export default function BioCard() {
   return (
     <Card
       sx={{
-        width: 320,
+        width: 'auto',
         maxWidth: '100%',
         boxShadow: 'lg',
         bgcolor: 'rgba(79, 70, 229, 0.2)'
       }}
     >
       <CardContent sx={{ alignItems: 'center', textAlign: 'center' }}>
-        <Avatar src="/static/images/avatar/1.jpg" sx={{ '--Avatar-size': '4rem' }} />
+        <Avatar src="/static/images/avatar/1.jpg" sx={{ '--Avatar-size': '4rem'}} />
         <Chip
           size="sm"
           variant="soft"
