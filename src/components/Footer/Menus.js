@@ -4,18 +4,18 @@ export const PRODUCTS = [
     { name: "Easy Content", link: "#" },
   ];
   export const RESOURCES = [
-    { name: "Industries and tools", link: "#" },
+    { name: "Gallery", link: "/gallery" },
     { name: "Use cases", link: "#" },
     { name: "Blog", link: "#" },
     { name: "Online evenet", link: "#" },
     { name: "Nostrud exercitation", link: "#" },
   ];
   export const COMPANY = [
-    { name: "Diversity & inclusion", link: "#" },
-    { name: "About us", link: "#" },
-    { name: "Press", link: "#" },
-    { name: "Customer Stories", link: "#" },
-    { name: "Online communities", link: "#" },
+    { name: "About Us", link: "/about-us" },
+    { name: "Services", link: "/services" },
+    { name: "Career", link: "/career" },
+    { name: "Projects", link: "/projects" },
+    { name: "Contact Us", link: "/contact-us" },
   ];
   export const SUPPORT = [
     { name: "Documentation", link: "#" },

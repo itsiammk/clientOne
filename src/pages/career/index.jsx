@@ -14,19 +14,9 @@ import style from '../../components/Common/card.module.scss'
 const CareerPage = () => {
   const jobPositions = [
     {
-      title: 'Software Engineer',
+      title: 'Coming soon..',
       description:
-        'We are seeking a talented Software Engineer to join our team. You will be responsible for designing, developing, and maintaining our software applications.',
-    },
-    {
-      title: 'Product Manager',
-      description:
-        'We are looking for an experienced Product Manager to lead the development and execution of our product strategy.',
-    },
-    {
-      title: 'UI/UX Designer',
-      description:
-        'We are seeking a creative UI/UX Designer to help us create intuitive and visually appealing user interfaces for our products.',
+        'Coming soon...',
     },
   ];
 

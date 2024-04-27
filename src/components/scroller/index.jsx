@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles  from './style.module.scss'
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 const Scroller = () => {
     const [scollPosition , setScrollPosition] = useState(0)
@@ -25,7 +26,7 @@ const Scroller = () => {
     <>
     {scollPosition > 270 && 
           <button className={styles.scrollToTopButton} onClick={scrollToTop}>
-            scroll to top
+            <ExpandLessIcon />
           </button>
         }
     </>
