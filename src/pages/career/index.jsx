@@ -28,7 +28,7 @@ const CareerPage = () => {
   return (
     <>
     <WaveCommon text={'Join Our Team'} />
-    <Box sx={{ p: 4, bgcolor: 'white' }}>
+    <Box sx={{ p: 4, bgcolor: 'white', px: '10vw' }}>
       <Box sx={{ mb: 6, textAlign: 'center' }}>
         
         <Typography level="body1" sx={{ mx: 'auto', color: 'text.secondary' }}>

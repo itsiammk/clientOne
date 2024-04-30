@@ -18,20 +18,20 @@ const Gallery = () => {
       type: 'button',
       onClick: () => setCurrentTag('one'),
       class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
-      heading: 'One'
+      heading: 'Bangalore Bridge'
     },
     {
       type: 'button',
       onClick: () => setCurrentTag('two'),
       class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
-      heading: 'Two'
+      heading: 'Bridge'
     },
     {
       type: 'button',
       onClick: () => setCurrentTag('three'),
       class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
-      heading: 'Three'
-    }
+      heading: 'Metro'
+    },
   ]
 
   const filteredData = currentTag

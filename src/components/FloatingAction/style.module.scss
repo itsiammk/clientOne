@@ -1,0 +1,15 @@
+.main {
+    position: fixed;
+    bottom: 20px; 
+    left: 10px; 
+    z-index: 9999; 
+    cursor: pointer;
+    div {
+        button {
+            background-color: rgb(34, 34, 195) !important;
+        }
+        button:hover {
+            background-color: rgb(23, 23, 132) !important;
+        }
+    }
+}

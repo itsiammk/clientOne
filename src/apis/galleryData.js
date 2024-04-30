@@ -1,33 +1,28 @@
 export const data = [
   {
     type: "image",
-    content: "img1.jfif",
+    content: "projectGallery2.jpeg",
     tag: "one",
   },
   {
     type: "video",
-    content: "vid1.mp4",
+    content: "projectGallery1.mp4",
     tag: "three",
   },
   {
     type: "image",
-    content: "img2.jfif",
+    content: "projectGallery3.jpeg",
     tag: "two",
   },
   {
     type: "image",
-    content: "img3.jfif",
+    content: "projectGallery4.jpeg",
     tag: "one",
   },
   {
     type: "image",
-    content: "img4.jfif",
+    content: "projectGallery5.jpeg",
     tag: "two",
-  },
-  {
-    type: "video",
-    content: "vid1.mp4",
-    tag: "three",
   },
   {
     type: "image",
@@ -36,27 +31,32 @@ export const data = [
   },
   {
     type: "image",
-    content: "service.png",
-    tag: "two",
-  },
-  {
-    type: "video",
-    content: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    content: "projectGallery6.jpeg",
     tag: "two",
   },
   {
     type: "image",
-    content: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg",
+    content: "projectGallery7.jpeg",
     tag: "one",
   },
   {
     type: "image",
-    content: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg",
+    content: "projectGallery8.jpeg",
     tag: "two",
   },
   {
-    type: "video",
-    content: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    type: "image",
+    content: "projectGallery9.jpeg",
+    tag: "one",
+  },
+  {
+    type: "image",
+    content: "projectGallery10.jpeg",
+    tag: "one",
+  },
+  {
+    type: "image",
+    content: "projectGallery11.jpeg",
     tag: "one",
   },
 ];

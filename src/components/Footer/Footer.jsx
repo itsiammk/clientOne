@@ -10,12 +10,12 @@ import style from "./style.module.scss";
 
 const Footer = () => {
   const handleCallClick = () => {
-    window.location.href = "tel:+919373773838";
+    window.location.href = "tel:+919971185889";
   };
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hello I am coming from website, please reply");
-    const whatsappUrl = `https://wa.me/917376295773?text=${message}`;
+    const message = encodeURIComponent("Hey there");
+    const whatsappUrl = `https://wa.me/919971185889?text=${message}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -39,7 +39,7 @@ const Footer = () => {
           </button>
           <div>
             <Typography level="body-xs" sx={{ color: "white", marginTop: "3px" }}>
-              +91 9373773838
+              +91 9971185889
             </Typography>
           </div>
         </div>
@@ -55,7 +55,7 @@ const Footer = () => {
           </button>
           <div>
             <Typography level="body-xs" sx={{ color: "white", marginTop: "3px" }}>
-              +91 9373773838
+              +91 9971185889
             </Typography>
           </div>
         </div>
@@ -71,7 +71,7 @@ const Footer = () => {
           </button>
           <div>
             <Typography level="body-xs" sx={{ color: "white", marginTop: "3px" }}>
-              contact@swatienterprises.com
+            info.senterprises1122@gmail.com
             </Typography>
           </div>
         </div>

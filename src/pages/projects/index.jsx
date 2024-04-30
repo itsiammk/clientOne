@@ -1,5 +1,5 @@
 import TimelineElement from "@/components/TimelineElements";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -8,9 +8,14 @@ import "react-vertical-timeline-component/style.min.css";
 import style from "./style.module.scss";
 import { workData } from "@/apis/projectsData";
 import WaveCommon from "@/components/Common/Wave";
+import { isMobileOnly } from "react-device-detect";
 
 const Projects = () => {
   const [projectData, setProjectData] = useState('all');
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile(isMobileOnly);
+  }, [isMobileOnly]);
   const filteredData = workData?.filter((item) => projectData === 'all' ? item : item.tag === projectData)
   return (
     <div className={style.main}>
@@ -43,7 +48,7 @@ const Projects = () => {
         </button>
       </div>
 
-      <VerticalTimeline>
+      <VerticalTimeline animate={!isMobile}>
         {filteredData.map((item, index) => (
           <TimelineElement key={index} data={item} isWork={index % 2} />
         ))}
