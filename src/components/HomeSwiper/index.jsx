@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const HomeSwiper = () => {
   const images = [
-    "/img7.jpeg",
+    "projectGallery5.webp",
   ];
   return (
     <div className={style.mainBox}>
