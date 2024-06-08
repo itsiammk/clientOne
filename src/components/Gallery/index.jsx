@@ -18,19 +18,67 @@ const Gallery = () => {
       type: 'button',
       onClick: () => setCurrentTag('one'),
       class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
-      heading: 'Bangalore Bridge'
+      heading: 'Bangalore'
     },
     {
       type: 'button',
       onClick: () => setCurrentTag('two'),
       class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
-      heading: 'Bridge'
+      heading: 'Metro Station'
     },
     {
       type: 'button',
       onClick: () => setCurrentTag('three'),
       class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
-      heading: 'Metro'
+      heading: 'DBL Karnataka'
+    },
+    {
+      type: 'button',
+      onClick: () => setCurrentTag('four'),
+      class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
+      heading: 'Fabrication'
+    },
+    {
+      type: 'button',
+      onClick: () => setCurrentTag('five'),
+      class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
+      heading: 'SSP Plant'
+    },
+    {
+      type: 'button',
+      onClick: () => setCurrentTag('six'),
+      class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
+      heading: 'Metal Fabrication'
+    },
+    {
+      type: 'button',
+      onClick: () => setCurrentTag('seven'),
+      class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
+      heading: 'Piping Work'
+    },
+    {
+      type: 'button',
+      onClick: () => setCurrentTag('eight'),
+      class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
+      heading: 'Thirupati ROB'
+    },
+    {
+      type: 'button',
+      onClick: () => setCurrentTag('nine'),
+      class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
+      heading: 'Wardha Construction'
+    },
+    {
+      type: 'button',
+      onClick: () => setCurrentTag('ten'),
+      class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
+      heading: 'Yavatmal'
+    },
+    {
+      type: 'button',
+      onClick: () => setCurrentTag('eleven'),
+      class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
+      heading: 'Others'
     },
   ]
 

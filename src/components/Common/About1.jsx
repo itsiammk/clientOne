@@ -66,12 +66,13 @@ const About1 = () => {
             <BioCard />
           </div>
           <div className={style.dashboard}>
-            {dashboard.map((item) => {
+            {dashboard.map((item, index) => {
               return (
                 <NumberCard
                   heading={item.heading}
                   number={item.number}
                   plus={item.plus}
+                  key={index}
                 />
               );
             })}
@@ -104,9 +105,9 @@ const About1 = () => {
                   slidesPerView={isMobile ? 1 : 3}
                   spaceBetween={isMobile ? 0 : 80}
                 >
-                  {companies.map((item) => {
+                  {companies.map((item, index) => {
                     return (
-                      <SwiperSlide>
+                      <SwiperSlide key={index}>
                         <InteractiveCard
                           heading={item.name}
                           image={item.image}

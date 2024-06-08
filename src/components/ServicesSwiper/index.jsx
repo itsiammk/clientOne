@@ -25,8 +25,8 @@ const ServicesSwiper = () => {
         </button>
       </h1>
       <div className={style.cards}>
-      {serviceapi?.map((item, index) => (
-          <Cards title={item.title} info={item.info} imageSrc={item.logo} />
+      {serviceapi?.map((item) => (
+          <Cards key={item.id} title={item.title} info={item.info} imageSrc={item.logo} />
       ))}
       </div>
     </div>
