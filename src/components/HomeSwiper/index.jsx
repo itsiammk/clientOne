@@ -1,17 +1,9 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
 import style from "./style.module.scss";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import serviceapi from "@/apis/servicesApi";
-import Image from "next/image";
 
 const HomeSwiper = () => {
   const images = [
-    "HomeTop.jpg",
+    "https://res.cloudinary.com/dieumlbdc/image/upload/v1720371889/swati/HomeTop_cd14ye.jpg",
   ];
   return (
     <div className={style.mainBox}>
