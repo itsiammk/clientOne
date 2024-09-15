@@ -10,9 +10,16 @@ import {
 } from '@mui/joy';
 import WaveCommon from '@/components/Common/Wave';
 import style from '../../components/Common/card.module.scss'
+import { useRouter } from 'next/router';
 
 const CareerPage = () => {
+  const router = useRouter()
   const jobPositions = [
+    {
+      title: 'Erection Engineer (3+ years)',
+      description:
+        'We need Erection Engineer with minimum 3yrs of experience for railway bridge and ROB.',
+    },
     {
       title: 'Coming soon..',
       description:
@@ -66,6 +73,7 @@ const CareerPage = () => {
                 <Button
                     variant="solid"
                     className="my-custom-button"
+                    onClick={()=> router.push("/contact-us")}
                     sx={{
                         '&.my-custom-button': {
                         bgcolor: theme.secondary,

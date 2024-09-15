@@ -15,7 +15,7 @@ const services = [
     title: "Fabrication of All Types of Steel Structures",
     description:
       "From intricate designs to robust industrial frameworks, we craft steel with precision and artistry. Our steel structures are more than functional; they're works of art.",
-    imageSrc: "/fabrication.png",
+    imageSrc: "/fabri.webp",
   },
   {
     title: "Pre-Engineered Building (PEB)",
@@ -52,16 +52,15 @@ const services = [
 const Services = () => {
   return (
     <div className={styles.main}>
-      <WaveCommon text={'Services'} />
-
+      <WaveCommon text={"Services"} />
 
       <div className={styles.container}>
         <h1 className={styles.headingText}>
-          At <span>Swati Enterprises</span>, we excel in transforming visions into reality
-          through our comprehensive range of services. From erecting
-          awe-inspiring steel structures and bridges to fabricating intricate
-          steel works of art, our expertise knows no bounds. Our innovative
-          Pre-Engineered Building solutions combine efficiency and
+          At <span>Swati Enterprises</span>, we excel in transforming visions
+          into reality through our comprehensive range of services. From
+          erecting awe-inspiring steel structures and bridges to fabricating
+          intricate steel works of art, our exp ertise knows no bounds. Our
+          innovative Pre-Engineered Building solutions combine efficiency and
           sustainability, while our engineering consultancy ensures flawless
           execution. With precise detailing and a skilled workforce, we bring
           dreams to life. Moreover, our logistics and export packing services
@@ -83,10 +82,11 @@ const Services = () => {
               >
                 <AspectRatio minHeight={200} objectFit="contain">
                   <img
-                    className={styles.serviceImage}
+                    className={`${service.imageSrc === "/fabri.webp" && styles.serviceImage}`}
                     src={service.imageSrc}
                     alt={service.title}
                     loading="lazy"
+                    
                   />
                 </AspectRatio>
                 <div className={styles.cardContent}>

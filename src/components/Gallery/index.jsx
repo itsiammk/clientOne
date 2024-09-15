@@ -75,18 +75,20 @@ const Gallery = () => {
       class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
       heading: "Yavatmal",
     },
-    {
-      type: "button",
-      onClick: () => setCurrentTag("eleven"),
-      class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
-      heading: "Others",
-    },
+    // {
+    //   type: "button",
+    //   onClick: () => setCurrentTag("eleven"),
+    //   class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
+    //   heading: "Others",
+    // },
   ];
 
   console.log(data)
 
   const filteredData = currentTag
-    ? data.filter((item) => item.tag === currentTag)
+    ? data.filter((item) => {
+      console.log(item.tag,'item');
+      return item.tag === currentTag})
     : data;
 
   const openModal = (content) => {

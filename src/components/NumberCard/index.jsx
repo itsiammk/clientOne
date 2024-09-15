@@ -20,7 +20,7 @@ const NumberCard = ({ heading, number, plus }) => {
           start={0}
           end={number}
           duration={3}
-          separator=","
+          separator={""}
         />
         {plus && '+'}
       </h2>

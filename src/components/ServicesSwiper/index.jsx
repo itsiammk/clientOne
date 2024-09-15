@@ -11,8 +11,10 @@ import serviceapi from "@/apis/servicesApi";
 import Cards from "../Common/Card";
 import { useMediaQuery } from 'react-responsive';
 import Button from '@mui/joy/Button';
+import { useRouter } from "next/router";
 
 const ServicesSwiper = () => {
+  const router = useRouter()
   const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
     <div className={`${style.main} pl-2 pr-2 pb-20 pt-5 shadow-md body-font`}>
@@ -20,7 +22,7 @@ const ServicesSwiper = () => {
         <span>
           SERVICES
         </span>
-        <button className={style.button}>
+        <button onClick={()=> router.push("/services")} className={style.button}>
           View All
         </button>
       </h1>

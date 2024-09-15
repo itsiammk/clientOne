@@ -9,6 +9,8 @@ import { Typography } from "@mui/joy";
 import style from "./style.module.scss";
 
 const Footer = () => {
+  const today = new Date();
+  const year = today.getFullYear();
   const handleCallClick = () => {
     window.location.href = "tel:+919971185889";
   };
@@ -38,7 +40,10 @@ const Footer = () => {
             Call
           </button>
           <div>
-            <Typography level="body-xs" sx={{ color: "white", marginTop: "3px" }}>
+            <Typography
+              level="body-xs"
+              sx={{ color: "white", marginTop: "3px" }}
+            >
               +91 9971185889
             </Typography>
           </div>
@@ -54,7 +59,10 @@ const Footer = () => {
             Whatsapp
           </button>
           <div>
-            <Typography level="body-xs" sx={{ color: "white", marginTop: "3px" }}>
+            <Typography
+              level="body-xs"
+              sx={{ color: "white", marginTop: "3px" }}
+            >
               +91 9971185889
             </Typography>
           </div>
@@ -70,8 +78,11 @@ const Footer = () => {
             Mail
           </button>
           <div>
-            <Typography level="body-xs" sx={{ color: "white", marginTop: "3px" }}>
-            info.senterprises1122@gmail.com
+            <Typography
+              level="body-xs"
+              sx={{ color: "white", marginTop: "3px" }}
+            >
+              info.senterprises1122@gmail.com
             </Typography>
           </div>
         </div>
@@ -80,7 +91,7 @@ const Footer = () => {
       <ItemsContainer />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center pt-2 text-gray-400 text-sm pb-8">
-        <span>Copyright © 2024 Swati Enterprises. All rights reserved.</span>
+        <span>Copyright © {year} Swati Enterprises. All rights reserved.</span>
         <span>SWATI ENTERPRISES</span>
         {/* <SocialIcons Icons={Icons} /> */}
       </div>

@@ -3,7 +3,7 @@ import style from "./style.module.scss";
 
 const HomeSwiper = () => {
   const images = [
-    "https://res.cloudinary.com/dieumlbdc/image/upload/v1720371889/swati/HomeTop_cd14ye.jpg",
+    "https://res.cloudinary.com/dieumlbdc/image/upload/v1726390452/swati/HomeTop_cd14ye_epgyxi.webp",   
   ];
   return (
     <div className={style.mainBox}>

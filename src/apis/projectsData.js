@@ -12,23 +12,23 @@ export const workData = [
   {
     date: "Ongoing",
     title: "Wardha-Nanded New B G, Railway bridges – Yavatmal Segment MH",
-    subtitle: "36 Mtrs ROB and Railway bridges of 40 Kms near Yavatmal MH",
+    subtitle: "18, 36 and 51 Mtrs ROB and Railway bridges of 40 Kms near Yavatmal MH",
     description: "All steel girder's works are going as per RDSO & Railway norms with quality and under proper safety measures.",
     iconStyle: { background: "#048848", color: "#fff" },
     contentStyle: { background: "#048848", color: "#fff" },
     contentArrowStyle: { borderRight: "7px solid #048848" },
     tag: 'ongoing'
   },
-  {
-    date: "Ongoing",  
-    title: "ROB and Railways bridges (36 Mtrs & 18 Mtrs span) on Wardha-Nanded New B G, Railway over bridge (ROB) – Yavatmal, MH",
-    subtitle: "Railway bridge construction project",
-    description: "Major project for Central Railway.",
-    iconStyle: { background: "#048848", color: "#fff" },
-    contentStyle: { background: "#048848", color: "#fff" },
-    contentArrowStyle: { borderRight: "7px solid #048848" },
-    tag: 'ongoing'
-  },
+  // {
+  //   date: "Ongoing",  
+  //   title: "ROB and Railways bridges (36 Mtrs & 18 Mtrs span) on Wardha-Nanded New B G, Railway over bridge (ROB) – Yavatmal, MH",
+  //   subtitle: "Railway bridge construction project",
+  //   description: "Major project for Central Railway.",
+  //   iconStyle: { background: "#048848", color: "#fff" },
+  //   contentStyle: { background: "#048848", color: "#fff" },
+  //   contentArrowStyle: { borderRight: "7px solid #048848" },
+  //   tag: 'ongoing'
+  // },
   {
     date: "Ongoing",
     title: "Bow String Girder 42 Mtrs (RDSO) Location:- Chipurpalle (ROB 1451), Vishakhapatnam, A.P.",
@@ -38,16 +38,6 @@ export const workData = [
     contentStyle: { background: "#048848", color: "#fff" },
     contentArrowStyle: { borderRight: "7px solid #048848" },
     tag: 'ongoing'
-  },
-  {
-    date: "Ongoing",
-    title: "Composite Girder (Viaduct) Bangalore Metro rail Project", 
-    subtitle: "Metro viaduct construction project",
-    description: "Significant metro infrastructure project.",
-    iconStyle: { background: "#048848", color: "#fff" },
-    contentStyle: { background: "#048848", color: "#fff" },
-    contentArrowStyle: { borderRight: "7px solid #048848" },
-    tag: 'ongoing' 
   },
   {
     date: "Closed",
@@ -62,7 +52,7 @@ export const workData = [
   {
     date: "Closed",
     title: "SSP PLANT (INDORAMA) Butibori Nagpur-MH", 
-    subtitle: "1) Structural Erection of SSP Plant (Height of Structure = +66.00 Mtrs), 2) Erection of Pipe racks",
+    subtitle: "1) Consultancy for Structural Fabrication and Erection of SSP Plant (Height of Structure = +66.00 Mtrs), 2) Fabrication of Pipe racks",
     description: "All Erection activities have done with Proper safety measures and Quality.",
     iconStyle: { background: "rgb(235, 7, 7)", color: "#fff" },
     contentStyle: { background: "rgb(235, 7, 7)", color: "#fff" },

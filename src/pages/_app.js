@@ -6,30 +6,16 @@ import NextNProgress from 'nextjs-progressbar';
 export default function App({ Component, pageProps }) {
   return (
     <>
-    <Head>
+      <Head>
         <link rel="icon" href="/logo.png" />
-        <meta name="description" content="Welcome to the world of metal magic, where we've honed our skills
-            for over 12 years. We're not your ordinary metal treatment company;
-            we're small but mighty, specializing in erecting sturdy steel
-            structures, crafting all sorts of steel wonders, and creating
-            advanced Pre-Engineered Buildings (PEB). But that's not all! We're
-            also your go-to experts for engineering advice, detailed shop
-            drawings, and providing skilled workers for various construction
-            tasks. Oh, and we even help with logistics and export packing – talk
-            about versatile! <br /> But what truly sets us apart is our expertise in
-            BRIDGES and FOB. We are the architects of connections that transcend
-            time, where each bridge is not just a physical structure but a
-            testament to our engineering prowess. Our secret ingredients? A
-            highly skilled team, state-of-the-art facilities, and an unwavering
-            commitment to making your metal dreams come true. So, whether you're
-            building dreams or bridges, we're here to turn your vision into
-            reality." />
-        <title>Swati Enterprises</title>
+        <meta name="description" content="Swati Enterprises: Premier construction experts with 12+ years experience. Specializing in Steel Structure Erection, Bridge Construction, PEB, Fabrication, Engineering Consultancy, Detailing, Labor Supply, and Logistics. Top-rated construction services for all your metal and building needs. Visit our website for expert solutions in steel structures, bridges, and more." />
+        <meta name="keywords" content="Swati Enterprises, Steel Structure Erection, Bridge Construction, Pre-Engineered Building, PEB, Steel Fabrication, Engineering Consultancy, Shop Drawings, Construction Labor Supply, Logistics Services, Export Packing, Best Construction Website, Metal Structures, Construction Experts" />
+        <title>Swati Enterprises - Expert Steel Structure & Bridge Construction</title>
       </Head>
-    <Layout> 
-      <NextNProgress color={'#ffffff99'} height={6} />
-      <Component {...pageProps} />
-    </Layout>
+      <Layout>
+        <NextNProgress color={'#ffffff99'} height={6} />
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
