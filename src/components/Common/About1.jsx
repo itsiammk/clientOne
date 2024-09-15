@@ -22,14 +22,15 @@ const About1 = () => {
     { name: "DILIP BUILDCON LIMITED", image: "/dilip.jpg" },
     { name: "METALFAB HIGHTECH PVT. LTD.", image: "/metafab.jpeg" },
     { name: "RENUKA EQUIPMENTS PVT. LTD.", image: "/renuka.jpeg" },
+    { name: "NIKHIL CONSTRUCTIONS GROUP PVT. LTD.", image: "/nikhil.jfif" },
   ];
   const dashboard = [
-    { heading: "ESTABLISHED in", number: 1987, plus: false },
-    { heading: "PROJECTS COMPLETED", number: 100, plus: true },
-    { heading: "WORK EMPLOYED", number: 26000, plus: true },
-    { heading: "ACTIVE PROJECTS", number: 50, plus: true },
-    { heading: "CLIENTS & PARTNERS", number: 70, plus: true },
-    { heading: "YEARS EXPERIENCE", number: 35, plus: true },
+    { heading: "ESTABLISHED in", number: 2022, plus: false },
+    { heading: "PROJECTS COMPLETED", number: 10, plus: true },
+    { heading: "WORK EMPLOYED", number: 150, plus: true },
+    { heading: "ACTIVE PROJECTS", number: 5, plus: true },
+    { heading: "CLIENTS & PARTNERS", number: 10, plus: true },
+    { heading: "YEARS EXPERIENCE", number: 10, plus: true },
   ];
 
   const [isMobile, setIsMobile] = useState(false);
@@ -66,12 +67,13 @@ const About1 = () => {
             <BioCard />
           </div>
           <div className={style.dashboard}>
-            {dashboard.map((item) => {
+            {dashboard.map((item, index) => {
               return (
                 <NumberCard
                   heading={item.heading}
                   number={item.number}
                   plus={item.plus}
+                  key={index}
                 />
               );
             })}
@@ -104,9 +106,9 @@ const About1 = () => {
                   slidesPerView={isMobile ? 1 : 3}
                   spaceBetween={isMobile ? 0 : 80}
                 >
-                  {companies.map((item) => {
+                  {companies.map((item, index) => {
                     return (
-                      <SwiperSlide>
+                      <SwiperSlide key={index}>
                         <InteractiveCard
                           heading={item.name}
                           image={item.image}

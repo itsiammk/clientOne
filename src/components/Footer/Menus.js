@@ -1,14 +1,11 @@
 export const PRODUCTS = [
-    { name: "Drag And Drop", link: "#" },
-    { name: "Visual Studio X", link: "#" },
-    { name: "Easy Content", link: "#" },
+    { name: "Services", link: "/services" },
+    { name: "Projects", link: "/projects" },
   ];
   export const RESOURCES = [
     { name: "Gallery", link: "/gallery" },
-    { name: "Use cases", link: "#" },
-    { name: "Blog", link: "#" },
-    { name: "Online evenet", link: "#" },
-    { name: "Nostrud exercitation", link: "#" },
+    { name: "Email Us", link: "/contact-us" },
+    { name: "Full Address", link: "/contact-us" }
   ];
   export const COMPANY = [
     { name: "About Us", link: "/about-us" },
@@ -18,14 +15,12 @@ export const PRODUCTS = [
     { name: "Contact Us", link: "/contact-us" },
   ];
   export const SUPPORT = [
-    { name: "Documentation", link: "#" },
-    { name: "Tutorials & guides", link: "#" },
-    { name: "Webinars", link: "#" },
-    { name: "Open-source", link: "#" },
+    { name: "About Swati Enterprises", link: "/about-us" },
+    { name: "Job Openings", link: "/career" }
   ];
   
   export const Icons = [
-    { name: "logo-facebook", link: "#" },
+    { name: "logo-facebook", link: "https://www.facebook.com/" },
     { name: "logo-twitter", link: "#" },
     { name: "logo-github", link: "#" },
     { name: "logo-linkedin", link: "#" },

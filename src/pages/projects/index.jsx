@@ -1,5 +1,5 @@
 import TimelineElement from "@/components/TimelineElements";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -8,9 +8,14 @@ import "react-vertical-timeline-component/style.min.css";
 import style from "./style.module.scss";
 import { workData } from "@/apis/projectsData";
 import WaveCommon from "@/components/Common/Wave";
+import { isMobileOnly } from "react-device-detect";
 
 const Projects = () => {
   const [projectData, setProjectData] = useState('all');
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile(isMobileOnly);
+  }, [isMobileOnly]);
   const filteredData = workData?.filter((item) => projectData === 'all' ? item : item.tag === projectData)
   return (
     <div className={style.main}>
@@ -18,32 +23,32 @@ const Projects = () => {
 
       <div className={style.projectButtons}>
         <button
-          class="bg-blue-900 hover:bg-blue-700 focus:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+          className="bg-blue-900 hover:bg-blue-700 focus:bg-blue-900 text-white font-bold py-2 px-4 rounded"
           onClick={() => setProjectData("all")}
         >
           All
         </button>
         <button
-          class="bg-blue-500 hover:bg-blue-700 focus:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+          className="bg-blue-500 hover:bg-blue-700 focus:bg-blue-900 text-white font-bold py-2 px-4 rounded"
           onClick={() => setProjectData("ongoing")}
         >
           Ongoing
         </button>
         <button
-          class="bg-blue-500 hover:bg-blue-700 focus:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+          className="bg-blue-500 hover:bg-blue-700 focus:bg-blue-900 text-white font-bold py-2 px-4 rounded"
           onClick={() => setProjectData("upcoming")}
         >
           Upcoming
         </button>
         <button
-          class="bg-blue-500 hover:bg-blue-700 focus:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+          className="bg-blue-500 hover:bg-blue-700 focus:bg-blue-900 text-white font-bold py-2 px-4 rounded"
           onClick={() => setProjectData("closed")}
         >
           Closed
         </button>
       </div>
 
-      <VerticalTimeline>
+      <VerticalTimeline animate={!isMobile}>
         {filteredData.map((item, index) => (
           <TimelineElement key={index} data={item} isWork={index % 2} />
         ))}

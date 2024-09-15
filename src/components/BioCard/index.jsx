@@ -39,8 +39,7 @@ export default function BioCard() {
         </Chip>
         <Typography level="h4">Deepak Verma</Typography>
         <Typography level='body-md' sx={{ padding: '0 5px' }}>
-          Hello, this is my bio and I am a PRO member of MUI. I am a developer and I
-          love to code.
+        Partner. Driving force behind Swati Enterprises' growth and success. Experienced professional.
         </Typography>
         <Box
           sx={{
