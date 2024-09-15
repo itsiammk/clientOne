@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { dataTag, galleryData as data } from "@/apis/galleryData";
+import { galleryData as data } from "@/apis/galleryData";
+import { useState } from "react";
 import Popup from "reactjs-popup";
 import style from "./style.module.scss";
-import axios from "axios";
 
 const Gallery = () => {
   const [currentTag, setCurrentTag] = useState(null);
