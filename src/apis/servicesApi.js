@@ -7,7 +7,7 @@ const serviceapi = [
     },
     {
       id: 2,
-      logo: "/fabrication.png",
+      logo: "/fabri.webp",
       title: "Fabrication of All Types of Steel Structures",
       info: "From intricate designs to robust industrial frameworks, we craft steel with precision and artistry. Our steel structures are more than functional; they're works of art.",
     },

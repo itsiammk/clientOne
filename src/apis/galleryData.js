@@ -1124,6 +1124,36 @@ export const galleryData = [
       "secure_url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1720372336/swati/bangalore/Bangalore03_saswta.jpg"
   },
   {
+      "asset_id": "1870e18c49fe35c5d351b441ca337ddef7",
+      "public_id": "swati/bangalore/Bangalore03_saswtadd",
+      "format": "jpg",
+      "version": 17203472336,
+      "resource_type": "image",
+      "type": "upload",
+      "created_at": "2024-07-07T17:12:16Z",
+      "bytes": 1323398,
+      "width": 4032,
+      "height": 3024,
+      "folder": "swati/bangalore",
+      "url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1726425530/swati/bangalore/160902_gbhuwp.jpg",
+      "secure_url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1726425530/swati/bangalore/160902_gbhuwp.jpg"
+  },
+  {
+      "asset_id": "1870e18c4449fe35c5d351b441ca337ddef7",
+      "public_id": "swati/bangalore/Bangalore03_saswtardd",
+      "format": "jpg",
+      "version": 172034472336,
+      "resource_type": "image",
+      "type": "upload",
+      "created_at": "2024-07-07T17:12:16Z",
+      "bytes": 1323398,
+      "width": 4032,
+      "height": 3024,
+      "folder": "swati/bangalore",
+      "url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1726425530/swati/bangalore/160901_qjszbm.jpg",
+      "secure_url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1726425530/swati/bangalore/160901_qjszbm.jpg"
+  },
+  {
       "asset_id": "b1fe6cfe70a4b30605cfa9cfb237bbc1",
       "public_id": "swati/bangalore/Bangalore04_ourczs",
       "format": "jpg",
