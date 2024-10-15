@@ -45,8 +45,8 @@ const About1 = () => {
         className={`overflow-hidden pt-20 pb-12 px-20 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark ${style.section}`}
       >
         <div className="containerm mx-auto">
-          <div className={style.aboutUsText}>
-            <p>
+          <div className={`${style.aboutUsText}`}>
+            <p className="my-auto">
               <span className={style.swatiText}>Swati Enterprises</span> is a
               growing company in the metal treatment industry operating as a
               small entrepreneur under MSME. With over 12 years of experience,

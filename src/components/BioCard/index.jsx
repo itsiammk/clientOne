@@ -23,7 +23,7 @@ export default function BioCard() {
       }}
     >
       <CardContent sx={{ alignItems: 'center', textAlign: 'center' }}>
-        <Avatar src="/static/images/avatar/1.jpg" sx={{ '--Avatar-size': '4rem'}} />
+        <Avatar src="/dkv.webp" sx={{ '--Avatar-size': '8rem'}} />
         <Chip
           size="sm"
           variant="soft"
@@ -35,11 +35,11 @@ export default function BioCard() {
             borderColor: 'background.surface',
           }}
         >
-          Co-Founder
+          Founder
         </Chip>
-        <Typography level="h4">Deepak Verma</Typography>
+        <Typography level="h4">Deepak Kumar Verma</Typography>
         <Typography level='body-md' sx={{ padding: '0 5px' }}>
-        Partner. Driving force behind Swati Enterprises' growth and success. Experienced professional.
+        Driving force behind Swati Enterprises' growth and success. Experienced professional.
         </Typography>
         <Box
           sx={{

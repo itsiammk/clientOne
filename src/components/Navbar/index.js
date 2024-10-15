@@ -81,7 +81,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`bg-white shadow-lg sticky top-0 ${style.main} ${(scrolledMid || navbarOpen) && style.scrollClass}`}>
+      <nav className={`bg-white shadow-lg sticky top-0 ${style.main} ${(scrolledMid || navbarOpen) && style.scrollClass} backdrop-blur-sm `}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -123,7 +123,7 @@ const NavItemsDesktop = ({handleNavbar, scrolledMid}) => {
     <a
       key={index}
       onClick={()=>handleNavigation(index)}
-      className={`${!scrolledMid && style.navItem} px-5 text-${menuItems?.textColor[index]} bg-${menuItems?.bg[index]} hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2 cursor-pointer`}
+      className={`${!scrolledMid && style.navItem} px-5 ${"text-black"} bg-${menuItems?.bg[index]} hover:bg-indigo-500 hover:text-${menuItems?.hoverTextColor[index]} rounded-lg p-2 cursor-pointer font-normal`}
     >
       {item}
     </a>

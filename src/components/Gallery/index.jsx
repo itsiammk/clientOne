@@ -48,7 +48,7 @@ const Gallery = () => {
       type: "button",
       onClick: () => setCurrentTag("six"),
       class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
-      heading: "Metal Fabrication",
+      heading: "Metal Fab",
     },
     {
       type: "button",
@@ -82,7 +82,6 @@ const Gallery = () => {
     // },
   ];
 
-  console.log(data)
 
   const filteredData = currentTag
     ? data.filter((item) => {
