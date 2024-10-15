@@ -60,7 +60,7 @@ const About1 = () => {
               fabrication, and skilled manpower for any type of erection and
               fabrication job. We have successfully completed several major
               projects for clients like AFCONS, Dilip Buildcon, Metalfab
-              Hightech, and Maharashtra Metro Rail Corp. Ltd. With our expertise
+              Hightech, and REPL A/C Maharashtra Metro Rail Corporation Ltd. With our expertise
               and commitment to quality, we strive to build better
               infrastructure solutions.
             </p>
