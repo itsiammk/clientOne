@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
       <Navbar />
       {children}
       <FloatingActionButtons />
-      <Scroller />
+      {/* <Scroller /> */}
       <Footer />
     </div>
   );

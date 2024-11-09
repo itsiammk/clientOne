@@ -58,21 +58,7 @@ export const galleryData = [
       "url": "http://res.cloudinary.com/dieumlbdc/image/upload/v1720372596/swati/yavatmal/Yavatmal02_ikh9ms.jpg",
       "secure_url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1720372596/swati/yavatmal/Yavatmal02_ikh9ms.jpg"
   },
-  {
-      "asset_id": "dfb234fe15a6985975471359b918cbca",
-      "public_id": "swati/yavatmal/Yavatmal01_znbdxc",
-      "format": "jpg",
-      "version": 1720372595,
-      "resource_type": "image",
-      "type": "upload",
-      "created_at": "2024-07-07T17:16:35Z",
-      "bytes": 1432114,
-      "width": 1871,
-      "height": 4160,
-      "folder": "swati/yavatmal",
-      "url": "http://res.cloudinary.com/dieumlbdc/image/upload/v1720372595/swati/yavatmal/Yavatmal01_znbdxc.jpg",
-      "secure_url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1720372595/swati/yavatmal/Yavatmal01_znbdxc.jpg"
-  },
+
   {
       "asset_id": "8fde8ab8f933519cad281f4e10d35475",
       "public_id": "swati/wardhaNikhilConstruction/Wardha05_hdprvx",
@@ -1134,7 +1120,7 @@ export const galleryData = [
       "bytes": 1323398,
       "width": 4032,
       "height": 3024,
-      "folder": "swati/bangalore",
+      "folder": "swati/yavatmal",
       "url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1726425530/swati/bangalore/160902_gbhuwp.jpg",
       "secure_url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1726425530/swati/bangalore/160902_gbhuwp.jpg"
   },
@@ -1149,7 +1135,7 @@ export const galleryData = [
       "bytes": 1323398,
       "width": 4032,
       "height": 3024,
-      "folder": "swati/bangalore",
+      "folder": "swati/yavatmal",
       "url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1726425530/swati/bangalore/160901_qjszbm.jpg",
       "secure_url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1726425530/swati/bangalore/160901_qjszbm.jpg"
   },
@@ -1183,6 +1169,21 @@ export const galleryData = [
       "url": "http://res.cloudinary.com/dieumlbdc/image/upload/v1720372332/swati/bangalore/Bangalore02_pxhlq3.jpg",
       "secure_url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1720372332/swati/bangalore/Bangalore02_pxhlq3.jpg"
   },
+  {
+    "asset_id": "dfb234fe15a6985975471359b918cbca",
+    "public_id": "swati/yavatmal/Yavatmal01_znbdxc",
+    "format": "jpg",
+    "version": 1720372595,
+    "resource_type": "image",
+    "type": "upload",
+    "created_at": "2024-07-07T17:16:35Z",
+    "bytes": 1432114,
+    "width": 1871,
+    "height": 4160,
+    "folder": "swati/yavatmal",
+    "url": "http://res.cloudinary.com/dieumlbdc/image/upload/v1720372595/swati/yavatmal/Yavatmal01_znbdxc.jpg",
+    "secure_url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1720372595/swati/yavatmal/Yavatmal01_znbdxc.jpg"
+},
   {
       "asset_id": "ff09b2aa622390c253a682f3d24ec862",
       "public_id": "swati/bangalore/Bangalore01_zloibh",

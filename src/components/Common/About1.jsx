@@ -1,20 +1,17 @@
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import style from "./card.module.scss";
-import NumberCard from "../NumberCard";
-import WaveCommon from "./Wave";
-import { Pagination, Autoplay, A11y } from "swiper/modules";
+import { useEffect, useState } from "react";
 import { isMobileOnly } from "react-device-detect";
+import NumberCard from "../NumberCard";
+import style from "./card.module.scss";
+import WaveCommon from "./Wave";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import InteractiveCard from "../InteractiveCard";
 import BioCard from "../BioCard";
+import CompanyAboutSection from "./CompanyAboutSection";
 
 const About1 = () => {
   const companies = [
@@ -78,54 +75,7 @@ const About1 = () => {
               );
             })}
           </div>
-          <div
-            className={`flex flex-wrap items-center justify-between -mx-4 ${style.clients}`}
-          >
-            <div className="w-full px-4">
-              <div className="mt-0 lg:mt-0">
-                <h2 className="mb-5 text-3xl font-bold sm:text-[40px]/[48px]">
-                  Clients
-                </h2>
-                <p
-                  className={`mb-5 text-base text-body-color ${style.aboutOne}`}
-                >
-                  Swati Enterprises boasts a technically-proficient team
-                  supported by a highly-motivated and skilled workforce. With
-                  over 12 years of experience in erection, fabrication, and
-                  related fields, we are well-equipped to handle projects of any
-                  scale. Our list of esteemed clients includes:
-                </p>
-              </div>
-              <div className={style.companiesList}>
-                <Swiper
-                  modules={[Pagination, Autoplay, A11y]}
-                  loop={true}
-                  autoplay={{ delay: 400000 }}
-                  pagination={{ clickable: true }}
-                  className="mySwiper"
-                  slidesPerView={isMobile ? 1 : 3}
-                  spaceBetween={isMobile ? 0 : 80}
-                >
-                  {companies.map((item, index) => {
-                    return (
-                      <SwiperSlide key={index}>
-                        <InteractiveCard
-                          heading={item.name}
-                          image={item.image}
-                          isMobile={isMobile}
-                        />
-                      </SwiperSlide>
-                    );
-                  })}
-                </Swiper>
-                {/* {
-                  companies.map((item)=> {
-                    return <InteractiveCard heading={item.name} image={item.image} />
-                  })
-                } */}
-              </div>
-            </div>
-          </div>
+            <CompanyAboutSection />
           <div
             className={`flex flex-wrap items-center justify-between -mx-4 ${style.capabilities}`}
           >

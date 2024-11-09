@@ -72,7 +72,7 @@ const Gallery = () => {
       type: "button",
       onClick: () => setCurrentTag("ten"),
       class: `text-gray-900 border border-white hover:border-gray-200 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3`,
-      heading: "Yavatmal",
+      heading: "Central railway’s ROB",
     },
     // {
     //   type: "button",
