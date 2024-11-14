@@ -22,7 +22,7 @@ const Footer = () => {
   };
 
   const handleEmailClick = () => {
-    const mailtoUrl = `mailto:info.senterprises1122@gmail.com`;
+    const mailtoUrl = `mailto:info@swatienterprises.com`;
     window.open(mailtoUrl, "_blank");
   };
 
@@ -82,7 +82,7 @@ const Footer = () => {
               level="body-xs"
               sx={{ color: "white", marginTop: "3px" }}
             >
-              info.senterprises1122@gmail.com
+              info@swatienterprises.com
             </Typography>
           </div>
         </div>
