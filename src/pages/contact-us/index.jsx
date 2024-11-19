@@ -21,10 +21,10 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        "service_7r0c2g4",
-        "template_htnt7bt",
+        "service_6vrxokh",
+        "template_33wna9j",
         e.target,
-        "EVNRdSpv2Cd9Yomem"
+        "dEwzjcTAg51ZpCjnb"
       )
       .then(
         (result) => {
