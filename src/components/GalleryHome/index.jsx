@@ -63,7 +63,7 @@ const GalleryHome = () => {
                       <img
                         className="h-auto max-w-full rounded-lg"
                         src={item.content}
-                        alt=""
+                        alt="image"
                       />
                     )}
                     {item.type === "video" && (

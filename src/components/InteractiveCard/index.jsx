@@ -22,7 +22,7 @@ export default function InteractiveCard({heading, image, width, isMobile}) {
           src={image}
         //   srcSet={`${image}2x`}
         //   loading="lazy"
-          alt=""
+          alt="interactive card"
         />
       </AspectRatio>
       <CardContent>

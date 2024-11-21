@@ -124,7 +124,7 @@ const Gallery = () => {
                 <img
                   className="h-auto max-w-full rounded-lg"
                   src={item.content}
-                  alt=""
+                  alt="galleryImage"
                   onClick={() => {
                     openModal(item.content);
                     setModalOpen(true);

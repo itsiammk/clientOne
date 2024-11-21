@@ -7,7 +7,7 @@ const HomeSwiper = () => {
   ];
   return (
     <div className={style.mainBox}>
-      <img className={style.images} src={images[0]} />
+      <img className={style.images} src={images[0]} alt="homeimg" />
     </div>
   );
 };

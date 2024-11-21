@@ -68,7 +68,7 @@ const ContactForm = () => {
     <>
       <div className={styles.container}>
         <span className={styles.bigCircle}></span>
-        <img src="/shape.png" className={styles.square} alt="" />
+        <img src="/shape.png" className={styles.square} alt="contact image" />
         <div className={styles.form}>
           <div className={styles.contactInfo}>
             <h3 className={styles.title}>Let's get in touch</h3>
