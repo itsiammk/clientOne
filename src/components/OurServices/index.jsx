@@ -59,7 +59,7 @@ const Services = () => {
           At <span>Swati Enterprises</span>, we excel in transforming visions
           into reality through our comprehensive range of services. From
           erecting awe-inspiring steel structures and bridges to fabricating
-          intricate steel works of art, our exp ertise knows no bounds. Our
+          intricate steel works of art, our expertise knows no bounds. Our
           innovative Pre-Engineered Building solutions combine efficiency and
           sustainability, while our engineering consultancy ensures flawless
           execution. With precise detailing and a skilled workforce, we bring
