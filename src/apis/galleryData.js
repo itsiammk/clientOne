@@ -1095,6 +1095,69 @@ export const galleryData = [
       "secure_url": "https://res.cloudinary.com/dieumlbdc/image/upload/v1720372355/swati/cottonMarketMetroStation/Cotton02_qfyi2j.jpg"
   },
   {
+    asset_id: "1870e18c49fe35c5d351b441ca337ef7j" ,  // updated new 1
+    resource_type: "image",
+    url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881143/swati/bangalore/bangaloreimages_4_q3yejr.webp",
+    secure_url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881143/swati/bangalore/bangaloreimages_4_q3yejr.webp",
+    folder: "swati/bangalore"
+  },
+  {
+    asset_id: "1870e18c49fe35c5d351b441cad337ef7j" ,  // updated new 2
+    resource_type: "image",
+    url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881140/swati/bangalore/bangaloreimages_1_eypd42.webp",
+    secure_url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881140/swati/bangalore/bangaloreimages_1_eypd42.webp",
+    folder: "swati/bangalore"
+  },
+  {
+    asset_id: "1870e18c49fe35c5d351b441ca337ef7dj" ,  // updated new 3
+    resource_type: "image",
+    url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881139/swati/bangalore/bangaloreimages_7_tjcbgz.webp",
+    secure_url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881139/swati/bangalore/bangaloreimages_7_tjcbgz.webp",
+    folder: "swati/bangalore"
+  },
+  {
+    asset_id: "1870e18c49fe35c5d351b441ca337dfef7j" ,  // updated new 4
+    resource_type: "image",
+    url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881139/swati/bangalore/bangaloreimages_8_scqilp.webp",
+    secure_url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881139/swati/bangalore/bangaloreimages_8_scqilp.webp",
+    folder: "swati/bangalore"
+  },
+  {
+    asset_id: "1870e18c49fe35c5d351b441ca337asef7j" ,  // updated new 5
+    resource_type: "image",
+    url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881134/swati/bangalore/bangaloreimages_9_m6bp5d.webp",
+    secure_url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881134/swati/bangalore/bangaloreimages_9_m6bp5d.webp",
+    folder: "swati/bangalore"
+  },
+  {
+    asset_id: "1870e18c49fe35c5d351b441cafd337ef7j" ,  // updated new 6
+    resource_type: "image",
+    url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881128/swati/bangalore/bangaloreimages_3_jpziu7.webp",
+    secure_url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881128/swati/bangalore/bangaloreimages_3_jpziu7.webp",
+    folder: "swati/bangalore"
+  },
+  {
+    asset_id: "1870e18c49fe35c5d351b441ca3dsf37ef7j" ,  // updated new 7
+    resource_type: "image",
+    url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881128/swati/bangalore/bangaloreimages_2_zxe6x5.webp",
+    secure_url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881128/swati/bangalore/bangaloreimages_2_zxe6x5.webp",
+    folder: "swati/bangalore"
+  },
+  {
+    asset_id: "1870e18c49fe35c5d351b441edsca337ef7j" ,  // updated new 8
+    resource_type: "image",
+    url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881125/swati/bangalore/bangaloreimages_5_gymtu8.webp",
+    secure_url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881125/swati/bangalore/bangaloreimages_5_gymtu8.webp",
+    folder: "swati/bangalore"
+  },
+  {
+    asset_id: "1870e18c49fe35c5d351b441ca33dfs7ef7j" ,  // updated new 9
+    resource_type: "image",
+    url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881110/swati/bangalore/bangaloreimages_6_b6yuos.webp",
+    secure_url: "https://res.cloudinary.com/dieumlbdc/image/upload/v1734881110/swati/bangalore/bangaloreimages_6_b6yuos.webp",
+    folder: "swati/bangalore"
+  },
+  {
       "asset_id": "1870e18c49fe35c5d351b441ca337ef7",  //1
       "public_id": "swati/bangalore/Bangalore03_saswta",
       "format": "jpg",
