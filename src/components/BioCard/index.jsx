@@ -23,7 +23,7 @@ export default function BioCard() {
       }}
     >
       <CardContent sx={{ alignItems: 'center', textAlign: 'center' }}>
-        <Avatar src="/dkv.webp" sx={{ '--Avatar-size': '8rem'}} />
+        <Avatar src="/deepakV.webp" sx={{ '--Avatar-size': '10rem'}} />
         <Chip
           size="sm"
           variant="soft"
