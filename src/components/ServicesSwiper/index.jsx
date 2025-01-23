@@ -28,8 +28,8 @@ const ServicesSwiper = () => {
         </button>
       </h1>
       <div className={style.cards}>
-        {serviceapi?.map((item) => (
-          <div onClick={() => router.push("/services")}>
+        {serviceapi?.map((item, id) => (
+          <div key={id} onClick={() => router.push("/services")}>
             <Cards
               key={item.id}
               title={item.title}
