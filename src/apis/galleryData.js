@@ -9,10 +9,39 @@ export const dataTag = {
    "swati/ThirupatiROB": "eight" ,
    "swati/wardhaNikhilConstruction": "nine" ,
    "swati/yavatmal": "ten" ,
+   "swati/bowString": "tenpointone" ,
    "swati": "eleven" ,
 }
 
 export const galleryData = [
+  {
+    "asset_id": "4172857698b0d319crde27941hhsff0750",
+    "format": "jpg",
+    "version": 1720372601,
+    "resource_type": "video",
+    "type": "upload",
+    "created_at": "2024-07-07T17:16:41Z",
+    "bytes": 1362323,
+    "width": 4160,
+    "height": 1871,
+    "folder": "swati/bowString",
+    "url": "https://res.cloudinary.com/dieumlbdc/video/upload/v1747247150/swati/bowStringGirder/djafvdbmhchjemczaaap.mp4",
+    "secure_url": "https://res.cloudinary.com/dieumlbdc/video/upload/v1747247150/swati/bowStringGirder/djafvdbmhchjemczaaap.mp4"
+},
+  {
+    "asset_id": "4172857698b0d319cead27941hhsff0750",
+    "format": "jpg",
+    "version": 1720372601,
+    "resource_type": "video",
+    "type": "upload",
+    "created_at": "2024-07-07T17:16:41Z",
+    "bytes": 1362323,
+    "width": 4160,
+    "height": 1871,
+    "folder": "swati/bowString",
+    "url": "https://res.cloudinary.com/dieumlbdc/video/upload/v1747247236/swati/bowStringGirder/tezfwzqg7ltn3vxossdk.mp4",
+    "secure_url": "https://res.cloudinary.com/dieumlbdc/video/upload/v1747247236/swati/bowStringGirder/tezfwzqg7ltn3vxossdk.mp4"
+},
   {
       "asset_id": "4172857698b0d319cead27941eff0750",
       "public_id": "swati/yavatmal/Yavatmal04_awz3qs",
